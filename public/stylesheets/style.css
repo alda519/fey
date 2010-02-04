@@ -1,0 +1,16 @@
+body {
+  background-image: url('/images/bg.png');
+  background-repeat: repeat-x;
+}
+
+#heading {
+  width: 880px;
+  margin: auto;
+}
+
+
+#content {
+  width: 880px;
+  margin: auto;
+  background-color: #fff; 
+}
