@@ -1,5 +1,5 @@
 set :application, "alda"
-set :repository, "cesta_k_vasemu_repositari"
+set :repository, "http://github.com/alda519/fey.git"
 set :scm, "git"
 
 role :web, "server3.railshosting.cz"
