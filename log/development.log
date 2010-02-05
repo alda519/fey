@@ -3554,3 +3554,1409 @@ ActionView::TemplateError (incompatible character encodings: ASCII-8BIT and UTF-
 Rendered rescues/_trace (262.3ms)
 Rendered rescues/_request_and_response (0.6ms)
 Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#logout (for 127.0.0.1 at 2010-02-05 21:19:46) [GET]
+Rendering template within layouts/application
+Rendering user/logout
+
+ActionView::TemplateError (incompatible character encodings: ASCII-8BIT and UTF-8) on line #37 of app/views/layouts/application.rhtml:
+34: <h1>Asociální síť</h1>
+35: <h2>aneb vystačíme si sami</h2>
+36: 
+37: <%= yield %>
+38: 
+39: </div>
+40: 
+
+    app/views/layouts/application.rhtml:37:in `_run_rhtml_app47views47layouts47application46rhtml'
+    <internal:prelude>:8:in `synchronize'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /usr/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (157.0ms)
+Rendered rescues/_request_and_response (2.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (8.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FeysbookController#index (for 127.0.0.1 at 2010-02-05 21:19:50) [GET]
+Redirected to http://localhost:3000/user/register
+Completed in 3ms (DB: 9) | 302 Found [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-02-05 21:19:50) [GET]
+  [4;35;1mUser Columns (35.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user/register
+
+ActionView::TemplateError (incompatible character encodings: ASCII-8BIT and UTF-8) on line #37 of app/views/layouts/application.rhtml:
+34: <h1>Asociální síť</h1>
+35: <h2>aneb vystačíme si sami</h2>
+36: 
+37: <%= yield %>
+38: 
+39: </div>
+40: 
+
+    app/views/layouts/application.rhtml:37:in `_run_rhtml_app47views47layouts47application46rhtml'
+    <internal:prelude>:8:in `synchronize'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /usr/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (208.3ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (27.6ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show (for 127.0.0.1 at 2010-02-05 21:20:57) [GET]
+Rendering template within layouts/application
+Rendering user/show
+
+ActionView::TemplateError (undefined method `name' for nil:NilClass) on line #4 of app/views/user/show.rhtml:
+1: <div class="foto">
+2: </div>
+3: 
+4: <h3><%= @current_user.name %></h3>
+
+    app/views/user/show.rhtml:4:in `_run_rhtml_app47views47user47show46rhtml'
+    <internal:prelude>:8:in `synchronize'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /usr/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (118.7ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show (for 127.0.0.1 at 2010-02-05 21:23:05) [GET]
+Redirected to http://localhost:3000/user/login
+Completed in 3ms (DB: 0) | 302 Found [http://localhost/user/show]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2010-02-05 21:23:06) [GET]
+Rendering template within layouts/application
+Rendering user/login
+Completed in 49ms (View: 44, DB: 0) | 200 OK [http://localhost/user/login]
+  [4;35;1mSQL (29.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2010-02-05 21:23:19) [POST]
+  Parameters: {"authenticity_token"=>"WFFnOJNWEtgBj9do8RHeHYM7PnPXNXoU6ssvhCqVX18=", "login"=>"alda", "password"=>"heslo", "commit"=>"P\xC5\x99ihl\xC3\xA1sit", "id"=>"login"}
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (57.7ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'alda' AND `users`.`password` = '6e017b5464f820a6c1bb5e9f6d711a667a80d8ea') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 103ms (DB: 89) | 302 Found [http://localhost/user/login/login]
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FeysbookController#index (for 127.0.0.1 at 2010-02-05 21:23:19) [GET]
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering feysbook/index
+
+ActionView::TemplateError (incompatible character encodings: ASCII-8BIT and UTF-8) on line #37 of app/views/layouts/application.rhtml:
+34: <h1>Asociální síť</h1>
+35: <h2>aneb vystačíme si sami</h2>
+36: 
+37: <%= yield %>
+38: 
+39: </div>
+40: 
+
+    app/views/layouts/application.rhtml:37:in `_run_rhtml_app47views47layouts47application46rhtml'
+    <internal:prelude>:8:in `synchronize'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /usr/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (202.6ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FeysbookController#index (for 127.0.0.1 at 2010-02-05 21:24:51) [GET]
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering feysbook/index
+
+ActionView::TemplateError (incompatible character encodings: ASCII-8BIT and UTF-8) on line #37 of app/views/layouts/application.rhtml:
+34: <h1>Asociální síť</h1>
+35: <h2>aneb vystačíme si sami</h2>
+36: 
+37: <%= yield %>
+38: 
+39: </div>
+40: 
+
+    app/views/layouts/application.rhtml:37:in `_run_rhtml_app47views47layouts47application46rhtml'
+    <internal:prelude>:8:in `synchronize'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /usr/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (115.6ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (7.7ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show (for 127.0.0.1 at 2010-02-05 21:24:56) [GET]
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (8.8ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/show
+Completed in 71ms (View: 49, DB: 18) | 200 OK [http://localhost/user/show]
+  [4;35;1mSQL (4.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show (for 127.0.0.1 at 2010-02-05 21:25:05) [GET]
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/show
+Completed in 17ms (View: 2, DB: 7) | 200 OK [http://localhost/user/show]
+  [4;36;1mSQL (15.7ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show (for 127.0.0.1 at 2010-02-05 21:25:18) [GET]
+  [4;35;1mUser Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/show
+Completed in 47ms (View: 4, DB: 18) | 200 OK [http://localhost/user/show]
+  [4;35;1mSQL (4.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show (for 127.0.0.1 at 2010-02-05 21:25:33) [GET]
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (2.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/show
+Completed in 32ms (View: 3, DB: 9) | 200 OK [http://localhost/user/show]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show (for 127.0.0.1 at 2010-02-05 21:27:22) [GET]
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/show
+Completed in 20ms (View: 5, DB: 3) | 200 OK [http://localhost/user/show]
+  [4;35;1mSQL (5.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show (for 127.0.0.1 at 2010-02-05 21:27:52) [GET]
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/show
+Completed in 33ms (View: 18, DB: 8) | 200 OK [http://localhost/user/show]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show (for 127.0.0.1 at 2010-02-05 21:28:35) [GET]
+  [4;35;1mUser Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/show
+Completed in 34ms (View: 19, DB: 3) | 200 OK [http://localhost/user/show]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show (for 127.0.0.1 at 2010-02-05 21:29:57) [GET]
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/show
+
+ActionView::TemplateError (undefined method `img_tag' for #<ActionView::Base:0xb456d88>) on line #2 of app/views/user/show.rhtml:
+1: <div class="foto">
+2: <%= img_tag 'images/rails.png' %>
+3: </div>
+4: 
+5: <h3><%= @current_user.name %></h3>
+
+    app/views/user/show.rhtml:2:in `_run_rhtml_app47views47user47show46rhtml'
+    <internal:prelude>:8:in `synchronize'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /usr/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (216.1ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (12.4ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show (for 127.0.0.1 at 2010-02-05 21:30:10) [GET]
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (35.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/show
+Completed in 69ms (View: 17, DB: 50) | 200 OK [http://localhost/user/show]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 21:30:10) [GET]
+
+ActionController::RoutingError (No route matches "/images/images/rails.png" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (5.5ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show (for 127.0.0.1 at 2010-02-05 21:31:11) [GET]
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/show
+Completed in 32ms (View: 8, DB: 8) | 200 OK [http://localhost/user/show]
+  [4;35;1mSQL (11.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-05 21:31:11) [GET]
+
+ActionController::RoutingError (No route matches "/images/images/rails.png" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show (for 127.0.0.1 at 2010-02-05 21:31:35) [GET]
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/show
+Completed in 33ms (View: 17, DB: 2) | 200 OK [http://localhost/user/show]
+  [4;35;1mSQL (27.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FeysbookController#index (for 127.0.0.1 at 2010-02-05 21:33:58) [GET]
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (7.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering feysbook/index
+
+ActionView::TemplateError (incompatible character encodings: ASCII-8BIT and UTF-8) on line #37 of app/views/layouts/application.rhtml:
+34: <h1>Asociální síť</h1>
+35: <h2>aneb vystačíme si sami</h2>
+36: 
+37: <%= yield %>
+38: 
+39: </div>
+40: 
+
+    app/views/layouts/application.rhtml:37:in `_run_rhtml_app47views47layouts47application46rhtml'
+    <internal:prelude>:8:in `synchronize'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /usr/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (117.9ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FeysbookController#index (for 127.0.0.1 at 2010-02-05 21:40:31) [GET]
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering feysbook/index
+
+ActionView::TemplateError (incompatible character encodings: ASCII-8BIT and UTF-8) on line #37 of app/views/layouts/application.rhtml:
+34: <h1>Asociální síť</h1>
+35: <h2>aneb vystačíme si sami</h2>
+36: 
+37: <%= yield %>
+38: 
+39: </div>
+40: 
+
+    app/views/layouts/application.rhtml:37:in `_run_rhtml_app47views47layouts47application46rhtml'
+    <internal:prelude>:8:in `synchronize'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /usr/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (115.0ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FeysbookController#index (for 127.0.0.1 at 2010-02-05 21:41:11) [GET]
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering feysbook/index
+
+ActionView::TemplateError (incompatible character encodings: ASCII-8BIT and UTF-8) on line #37 of app/views/layouts/application.rhtml:
+34: <h1>Asociální síť</h1>
+35: <h2>aneb vystačíme si sami</h2>
+36: 
+37: <%= yield %>
+38: 
+39: </div>
+40: 
+
+    app/views/layouts/application.rhtml:37:in `_run_rhtml_app47views47layouts47application46rhtml'
+    <internal:prelude>:8:in `synchronize'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /usr/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (119.3ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (8.5ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show (for 127.0.0.1 at 2010-02-05 21:41:14) [GET]
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/show
+Completed in 20ms (View: 3, DB: 11) | 200 OK [http://localhost/user/show]
+  [4;35;1mSQL (7.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show (for 127.0.0.1 at 2010-02-05 21:41:24) [GET]
+  [4;36;1mUser Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/show
+Completed in 27ms (View: 9, DB: 10) | 200 OK [http://localhost/user/show]
+  [4;36;1mSQL (5.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show (for 127.0.0.1 at 2010-02-05 21:41:41) [GET]
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/show
+Completed in 31ms (View: 17, DB: 8) | 200 OK [http://localhost/user/show]
+  [4;35;1mSQL (24.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#logout (for 127.0.0.1 at 2010-02-05 21:41:47) [GET]
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (2.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/logout
+
+ActionView::TemplateError (incompatible character encodings: ASCII-8BIT and UTF-8) on line #37 of app/views/layouts/application.rhtml:
+34: <h1>Asociální síť</h1>
+35: <h2>aneb vystačíme si sami</h2>
+36: 
+37: <%= yield %>
+38: 
+39: </div>
+40: 
+
+    app/views/layouts/application.rhtml:37:in `_run_rhtml_app47views47layouts47application46rhtml'
+    <internal:prelude>:8:in `synchronize'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /usr/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (116.2ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (15.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-02-05 21:41:51) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: login, logout, register, and show):
+  <internal:prelude>:8:in `synchronize'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (7.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show (for 127.0.0.1 at 2010-02-05 21:41:54) [GET]
+
+NoMethodError (undefined method `requested_uri' for #<ActionController::Request:0xb39ebd8>):
+  app/controllers/application_controller.rb:27:in `login_required'
+  <internal:prelude>:8:in `synchronize'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (94.7ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (2.6ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show (for 127.0.0.1 at 2010-02-05 21:42:48) [GET]
+
+NoMethodError (undefined method `requested_uri' for #<ActionController::Request:0xa62f408>):
+  app/controllers/application_controller.rb:27:in `login_required'
+  <internal:prelude>:8:in `synchronize'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (209.8ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (15.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show (for 127.0.0.1 at 2010-02-05 21:42:54) [GET]
+
+NoMethodError (undefined method `requested_uri' for #<ActionController::Request:0xb6c3200>):
+  app/controllers/application_controller.rb:27:in `login_required'
+  <internal:prelude>:8:in `synchronize'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (95.0ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (31.6ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2010-02-05 21:42:59) [GET]
+Rendering template within layouts/application
+Rendering user/login
+Completed in 7ms (View: 4, DB: 32) | 200 OK [http://localhost/user/login]
+  [4;35;1mSQL (24.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2010-02-05 21:43:16) [POST]
+  Parameters: {"authenticity_token"=>"WFFnOJNWEtgBj9do8RHeHYM7PnPXNXoU6ssvhCqVX18=", "login"=>"alda", "password"=>"heslo", "commit"=>"P\xC5\x99ihl\xC3\xA1sit", "id"=>"login"}
+  [4;36;1mUser Columns (7.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'alda' AND `users`.`password` = '6e017b5464f820a6c1bb5e9f6d711a667a80d8ea') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 19ms (DB: 32) | 302 Found [http://localhost/user/login/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FeysbookController#index (for 127.0.0.1 at 2010-02-05 21:43:16) [GET]
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering feysbook/index
+
+ActionView::TemplateError (incompatible character encodings: ASCII-8BIT and UTF-8) on line #37 of app/views/layouts/application.rhtml:
+34: <h1>Asociální síť</h1>
+35: <h2>aneb vystačíme si sami</h2>
+36: 
+37: <%= yield %>
+38: 
+39: </div>
+40: 
+
+    app/views/layouts/application.rhtml:37:in `_run_rhtml_app47views47layouts47application46rhtml'
+    <internal:prelude>:8:in `synchronize'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /usr/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (245.0ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (10.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show (for 127.0.0.1 at 2010-02-05 21:43:31) [GET]
+  [4;36;1mUser Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/show
+Completed in 61ms (View: 3, DB: 14) | 200 OK [http://localhost/user/show]
+  [4;36;1mSQL (10.5ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show (for 127.0.0.1 at 2010-02-05 21:43:33) [GET]
+  [4;35;1mUser Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (6.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/show
+Completed in 25ms (View: 3, DB: 19) | 200 OK [http://localhost/user/show]
+  [4;35;1mSQL (2.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show (for 127.0.0.1 at 2010-02-05 21:51:42) [GET]
+  [4;36;1mUser Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/show
+Completed in 43ms (View: 19, DB: 7) | 200 OK [http://localhost/user/show]
+  [4;36;1mSQL (11.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show (for 127.0.0.1 at 2010-02-05 21:52:01) [GET]
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/show
+
+ActionView::TemplateError (incompatible character encodings: ASCII-8BIT and UTF-8) on line #37 of app/views/layouts/application.rhtml:
+34: <h1>Asociální síť</h1>
+35: <h2>aneb vystačíme si sami</h2>
+36: 
+37: <%= yield %>
+38: 
+39: </div>
+40: 
+
+    app/views/layouts/application.rhtml:37:in `_run_rhtml_app47views47layouts47application46rhtml'
+    <internal:prelude>:8:in `synchronize'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /usr/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (225.2ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (6.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show (for 127.0.0.1 at 2010-02-05 21:52:13) [GET]
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/show
+
+ActionView::TemplateError (incompatible character encodings: ASCII-8BIT and UTF-8) on line #37 of app/views/layouts/application.rhtml:
+34: <h1>Asociální síť</h1>
+35: <h2>aneb vystačíme si sami</h2>
+36: 
+37: <%= yield %>
+38: 
+39: </div>
+40: 
+
+    app/views/layouts/application.rhtml:37:in `_run_rhtml_app47views47layouts47application46rhtml'
+    <internal:prelude>:8:in `synchronize'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /usr/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (118.4ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (36.7ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show (for 127.0.0.1 at 2010-02-05 21:52:17) [GET]
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/show
+
+ActionView::TemplateError (incompatible character encodings: ASCII-8BIT and UTF-8) on line #37 of app/views/layouts/application.rhtml:
+34: <h1>Asociální síť</h1>
+35: <h2>aneb vystačíme si sami</h2>
+36: 
+37: <%= yield %>
+38: 
+39: </div>
+40: 
+
+    app/views/layouts/application.rhtml:37:in `_run_rhtml_app47views47layouts47application46rhtml'
+    <internal:prelude>:8:in `synchronize'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /usr/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (118.6ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (34.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show (for 127.0.0.1 at 2010-02-05 21:52:21) [GET]
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/show
+
+ActionView::TemplateError (incompatible character encodings: ASCII-8BIT and UTF-8) on line #37 of app/views/layouts/application.rhtml:
+34: <h1>Asociální síť</h1>
+35: <h2>aneb vystačíme si sami</h2>
+36: 
+37: <%= yield %>
+38: 
+39: </div>
+40: 
+
+    app/views/layouts/application.rhtml:37:in `_run_rhtml_app47views47layouts47application46rhtml'
+    <internal:prelude>:8:in `synchronize'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /usr/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (119.9ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (37.8ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show (for 127.0.0.1 at 2010-02-05 21:52:25) [GET]
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/show
+
+ActionView::TemplateError (incompatible character encodings: ASCII-8BIT and UTF-8) on line #37 of app/views/layouts/application.rhtml:
+34: <h1>Asociální síť</h1>
+35: <h2>aneb vystačíme si sami</h2>
+36: 
+37: <%= yield %>
+38: 
+39: </div>
+40: 
+
+    app/views/layouts/application.rhtml:37:in `_run_rhtml_app47views47layouts47application46rhtml'
+    <internal:prelude>:8:in `synchronize'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /usr/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (206.8ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (9.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show (for 127.0.0.1 at 2010-02-05 21:52:30) [GET]
+  [4;36;1mUser Columns (3.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/show
+
+ActionView::TemplateError (incompatible character encodings: ASCII-8BIT and UTF-8) on line #37 of app/views/layouts/application.rhtml:
+34: <h1>Asociální síť</h1>
+35: <h2>aneb vystačíme si sami</h2>
+36: 
+37: <%= yield %>
+38: 
+39: </div>
+40: 
+
+    app/views/layouts/application.rhtml:37:in `_run_rhtml_app47views47layouts47application46rhtml'
+    <internal:prelude>:8:in `synchronize'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /usr/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (236.6ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (10.6ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show (for 127.0.0.1 at 2010-02-05 21:52:34) [GET]
+  [4;35;1mUser Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (2.8ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/show
+Completed in 36ms (View: 19, DB: 15) | 200 OK [http://localhost/user/show]
+  [4;35;1mSQL (9.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show (for 127.0.0.1 at 2010-02-05 21:52:44) [GET]
+  [4;36;1mUser Columns (3.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/show
+Completed in 33ms (View: 16, DB: 13) | 200 OK [http://localhost/user/show]
+  [4;36;1mSQL (7.7ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FeysbookController#index (for 127.0.0.1 at 2010-02-05 21:52:49) [GET]
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (7.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering feysbook/index
+
+ActionView::TemplateError (incompatible character encodings: ASCII-8BIT and UTF-8) on line #37 of app/views/layouts/application.rhtml:
+34: <h1>Asociální síť</h1>
+35: <h2>aneb vystačíme si sami</h2>
+36: 
+37: <%= yield %>
+38: 
+39: </div>
+40: 
+
+    app/views/layouts/application.rhtml:37:in `_run_rhtml_app47views47layouts47application46rhtml'
+    <internal:prelude>:8:in `synchronize'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /usr/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (117.1ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (8.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2010-02-05 21:53:06) [GET]
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/login
+Completed in 21ms (View: 7, DB: 11) | 200 OK [http://localhost/user/login]
+  [4;36;1mSQL (7.4ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FeysbookController#index (for 127.0.0.1 at 2010-02-05 21:53:28) [GET]
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering feysbook/index
+
+ActionView::TemplateError (incompatible character encodings: ASCII-8BIT and UTF-8) on line #37 of app/views/layouts/application.rhtml:
+34: <h1>Asociální síť</h1>
+35: <h2>aneb vystačíme si sami</h2>
+36: 
+37: <%= yield %>
+38: 
+39: </div>
+40: 
+
+    app/views/layouts/application.rhtml:37:in `_run_rhtml_app47views47layouts47application46rhtml'
+    <internal:prelude>:8:in `synchronize'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /usr/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (118.2ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (10.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show (for 127.0.0.1 at 2010-02-05 21:53:29) [GET]
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/show
+
+ActionView::TemplateError (incompatible character encodings: ASCII-8BIT and UTF-8) on line #37 of app/views/layouts/application.rhtml:
+34: <h1>Asociální síť</h1>
+35: <h2>aneb vystačíme si sami</h2>
+36: 
+37: <%= yield %>
+38: 
+39: </div>
+40: 
+
+    app/views/layouts/application.rhtml:37:in `_run_rhtml_app47views47layouts47application46rhtml'
+    <internal:prelude>:8:in `synchronize'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /usr/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (326.3ms)
+Rendered rescues/_request_and_response (14.8ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (6.8ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show (for 127.0.0.1 at 2010-02-05 21:53:49) [GET]
+  [4;35;1mUser Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/show
+Completed in 35ms (View: 20, DB: 9) | 200 OK [http://localhost/user/show]
+  [4;35;1mSQL (6.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#logout (for 127.0.0.1 at 2010-02-05 21:54:12) [GET]
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/logout
+
+ActionView::TemplateError (incompatible character encodings: ASCII-8BIT and UTF-8) on line #37 of app/views/layouts/application.rhtml:
+34: <h1>Asociální síť</h1>
+35: <h2>aneb vystačíme si sami</h2>
+36: 
+37: <%= yield %>
+38: 
+39: </div>
+40: 
+
+    app/views/layouts/application.rhtml:37:in `_run_rhtml_app47views47layouts47application46rhtml'
+    <internal:prelude>:8:in `synchronize'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /usr/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (129.7ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (9.4ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#logout (for 127.0.0.1 at 2010-02-05 21:54:36) [GET]
+Rendering template within layouts/application
+Rendering user/logout
+Completed in 173ms (View: 170, DB: 9) | 200 OK [http://localhost/user/logout]
+  [4;35;1mSQL (23.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2010-02-05 21:54:41) [POST]
+  Parameters: {"authenticity_token"=>"WFFnOJNWEtgBj9do8RHeHYM7PnPXNXoU6ssvhCqVX18=", "login"=>"", "password"=>"", "commit"=>"log in"}
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (3.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = '' AND `users`.`password` = 'da39a3ee5e6b4b0d3255bfef95601890afd80709') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/login
+Completed in 18ms (View: 4, DB: 28) | 200 OK [http://localhost/user/login]
+  [4;36;1mSQL (11.5ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2010-02-05 21:54:42) [POST]
+  Parameters: {"authenticity_token"=>"WFFnOJNWEtgBj9do8RHeHYM7PnPXNXoU6ssvhCqVX18=", "login"=>"", "password"=>"", "commit"=>"log in"}
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`login` = '' AND `users`.`password` = 'da39a3ee5e6b4b0d3255bfef95601890afd80709') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/login
+Completed in 21ms (View: 9, DB: 14) | 200 OK [http://localhost/user/login]
+  [4;35;1mSQL (25.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2010-02-05 21:54:48) [POST]
+  Parameters: {"authenticity_token"=>"WFFnOJNWEtgBj9do8RHeHYM7PnPXNXoU6ssvhCqVX18=", "login"=>"alda", "password"=>"heslo", "commit"=>"P\xC5\x99ihl\xC3\xA1sit", "id"=>"login"}
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'alda' AND `users`.`password` = '6e017b5464f820a6c1bb5e9f6d711a667a80d8ea') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 18ms (DB: 27) | 302 Found [http://localhost/user/login/login]
+  [4;36;1mSQL (4.4ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FeysbookController#index (for 127.0.0.1 at 2010-02-05 21:54:48) [GET]
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering feysbook/index
+
+ActionView::TemplateError (incompatible character encodings: ASCII-8BIT and UTF-8) on line #37 of app/views/layouts/application.rhtml:
+34: <h1>Asociální síť</h1>
+35: <h2>aneb vystačíme si sami</h2>
+36: 
+37: <%= yield %>
+38: 
+39: </div>
+40: 
+
+    app/views/layouts/application.rhtml:37:in `_run_rhtml_app47views47layouts47application46rhtml'
+    <internal:prelude>:8:in `synchronize'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /usr/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (119.8ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FeysbookController#index (for 127.0.0.1 at 2010-02-05 21:55:22) [GET]
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering feysbook/index
+
+ActionView::TemplateError (incompatible character encodings: ASCII-8BIT and UTF-8) on line #37 of app/views/layouts/application.rhtml:
+34: <h1>Asociální síť</h1>
+35: <h2>aneb vystačíme si sami</h2>
+36: 
+37: <%= yield %>
+38: 
+39: </div>
+40: 
+
+    app/views/layouts/application.rhtml:37:in `_run_rhtml_app47views47layouts47application46rhtml'
+    <internal:prelude>:8:in `synchronize'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /usr/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (118.2ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (3.7ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FeysbookController#index (for 127.0.0.1 at 2010-02-05 21:55:53) [GET]
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering feysbook/index
+Completed in 60ms (View: 19, DB: 6) | 200 OK [http://localhost/feysbook]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FeysbookController#index (for 127.0.0.1 at 2010-02-05 21:56:49) [GET]
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering feysbook/index
+Completed in 53ms (View: 4, DB: 3) | 200 OK [http://localhost/feysbook]
+  [4;36;1mSQL (10.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FeysbookController#index (for 127.0.0.1 at 2010-02-05 21:56:50) [GET]
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (3.9ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering feysbook/index
+Completed in 22ms (View: 2, DB: 16) | 200 OK [http://localhost/feysbook]
+  [4;35;1mSQL (22.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#logout (for 127.0.0.1 at 2010-02-05 21:56:56) [GET]
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (2.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/logout
+Completed in 16ms (View: 3, DB: 27) | 200 OK [http://localhost/user/logout]
+  [4;36;1mSQL (24.7ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2010-02-05 21:57:02) [POST]
+  Parameters: {"authenticity_token"=>"WFFnOJNWEtgBj9do8RHeHYM7PnPXNXoU6ssvhCqVX18=", "login"=>"alda", "password"=>"heslo", "commit"=>"log in"}
+  [4;35;1mUser Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`login` = 'alda' AND `users`.`password` = '6e017b5464f820a6c1bb5e9f6d711a667a80d8ea') LIMIT 1[0m
+Redirected to http://localhost:3000/user/show
+Completed in 13ms (DB: 27) | 302 Found [http://localhost/user/login]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show (for 127.0.0.1 at 2010-02-05 21:57:02) [GET]
+  [4;36;1mUser Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/show
+Completed in 19ms (View: 3, DB: 3) | 200 OK [http://localhost/user/show]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#logout (for 127.0.0.1 at 2010-02-05 21:57:37) [GET]
+  [4;35;1mUser Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/logout
+Completed in 17ms (View: 3, DB: 3) | 200 OK [http://localhost/user/logout]
+  [4;35;1mSQL (13.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#logout (for 127.0.0.1 at 2010-02-05 21:57:41) [GET]
+Rendering template within layouts/application
+Rendering user/logout
+Completed in 6ms (View: 3, DB: 13) | 200 OK [http://localhost/user/logout]
+  [4;36;1mSQL (35.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-02-05 21:57:45) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: login, logout, register, and show):
+  <internal:prelude>:8:in `synchronize'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (8.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FeysbookController#index (for 127.0.0.1 at 2010-02-05 21:57:48) [GET]
+Redirected to http://localhost:3000/user/register
+Completed in 3ms (DB: 8) | 302 Found [http://localhost/]
+  [4;36;1mSQL (7.4ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-02-05 21:57:48) [GET]
+  [4;35;1mUser Columns (4.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user/register
+
+ActionView::TemplateError (incompatible character encodings: ASCII-8BIT and UTF-8) on line #37 of app/views/layouts/application.rhtml:
+34: <h1>Asociální síť</h1>
+35: <h2>aneb vystačíme si sami</h2>
+36: 
+37: <%= yield %>
+38: 
+39: </div>
+40: 
+
+    app/views/layouts/application.rhtml:37:in `_run_rhtml_app47views47layouts47application46rhtml'
+    <internal:prelude>:8:in `synchronize'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /usr/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (227.1ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (24.9ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-02-05 21:58:26) [GET]
+Redirected to http://localhost:3000/
+Completed in 4ms (DB: 25) | 302 Found [http://localhost/user/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FeysbookController#index (for 127.0.0.1 at 2010-02-05 21:58:26) [GET]
+Redirected to http://localhost:3000/user/register
+Completed in 3ms (DB: 0) | 302 Found [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-02-05 21:58:26) [GET]
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user/register
+
+ActionView::TemplateError (incompatible character encodings: ASCII-8BIT and UTF-8) on line #37 of app/views/layouts/application.rhtml:
+34: <h1>Asociální síť</h1>
+35: <h2>aneb vystačíme si sami</h2>
+36: 
+37: <%= yield %>
+38: 
+39: </div>
+40: 
+
+    app/views/layouts/application.rhtml:37:in `_run_rhtml_app47views47layouts47application46rhtml'
+    <internal:prelude>:8:in `synchronize'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /usr/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (118.1ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (10.4ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-02-05 21:58:52) [GET]
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user/register
+
+ActionView::TemplateError (incompatible character encodings: ASCII-8BIT and UTF-8) on line #37 of app/views/layouts/application.rhtml:
+34: <h1>Asociální síť</h1>
+35: <h2>aneb vystačíme si sami</h2>
+36: 
+37: <%= yield %>
+38: 
+39: </div>
+40: 
+
+    app/views/layouts/application.rhtml:37:in `_run_rhtml_app47views47layouts47application46rhtml'
+    <internal:prelude>:8:in `synchronize'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /usr/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (228.3ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (8.5ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-02-05 21:59:03) [GET]
+  [4;35;1mUser Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user/register
+
+ActionView::TemplateError (incompatible character encodings: ASCII-8BIT and UTF-8) on line #37 of app/views/layouts/application.rhtml:
+34: <h1>Asociální síť</h1>
+35: <h2>aneb vystačíme si sami</h2>
+36: 
+37: <%= yield %>
+38: 
+39: </div>
+40: 
+
+    app/views/layouts/application.rhtml:37:in `_run_rhtml_app47views47layouts47application46rhtml'
+    <internal:prelude>:8:in `synchronize'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /usr/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (119.0ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-02-05 21:59:38) [GET]
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user/register
+
+ActionView::TemplateError (incompatible character encodings: ASCII-8BIT and UTF-8) on line #37 of app/views/layouts/application.rhtml:
+34: <h1>Asociální síť</h1>
+35: <h2>aneb vystačíme si sami</h2>
+36: 
+37: <%= yield %>
+38: 
+39: </div>
+40: 
+
+    app/views/layouts/application.rhtml:37:in `_run_rhtml_app47views47layouts47application46rhtml'
+    <internal:prelude>:8:in `synchronize'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /usr/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (230.2ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (19.8ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-02-05 21:59:40) [GET]
+  [4;35;1mUser Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user/register
+
+ActionView::TemplateError (incompatible character encodings: ASCII-8BIT and UTF-8) on line #37 of app/views/layouts/application.rhtml:
+34: <h1>Asociální síť</h1>
+35: <h2>aneb vystačíme si sami</h2>
+36: 
+37: <%= yield %>
+38: 
+39: </div>
+40: 
+
+    app/views/layouts/application.rhtml:37:in `_run_rhtml_app47views47layouts47application46rhtml'
+    <internal:prelude>:8:in `synchronize'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /usr/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (195.0ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (7.8ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FeysbookController#index (for 127.0.0.1 at 2010-02-05 21:59:42) [GET]
+Redirected to http://localhost:3000/user/register
+Completed in 3ms (DB: 8) | 302 Found [http://localhost/]
+  [4;35;1mSQL (1.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-02-05 21:59:42) [GET]
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user/register
+
+ActionView::TemplateError (incompatible character encodings: ASCII-8BIT and UTF-8) on line #37 of app/views/layouts/application.rhtml:
+34: <h1>Asociální síť</h1>
+35: <h2>aneb vystačíme si sami</h2>
+36: 
+37: <%= yield %>
+38: 
+39: </div>
+40: 
+
+    app/views/layouts/application.rhtml:37:in `_run_rhtml_app47views47layouts47application46rhtml'
+    <internal:prelude>:8:in `synchronize'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /usr/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (115.3ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (12.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-02-05 21:59:48) [GET]
+Redirected to http://localhost:3000/
+Completed in 3ms (DB: 12) | 302 Found [http://localhost/user/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FeysbookController#index (for 127.0.0.1 at 2010-02-05 21:59:48) [GET]
+Redirected to http://localhost:3000/user/register
+Completed in 3ms (DB: 0) | 302 Found [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-02-05 21:59:48) [GET]
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user/register
+
+ActionView::TemplateError (incompatible character encodings: ASCII-8BIT and UTF-8) on line #37 of app/views/layouts/application.rhtml:
+34: <h1>Asociální síť</h1>
+35: <h2>aneb vystačíme si sami</h2>
+36: 
+37: <%= yield %>
+38: 
+39: </div>
+40: 
+
+    app/views/layouts/application.rhtml:37:in `_run_rhtml_app47views47layouts47application46rhtml'
+    <internal:prelude>:8:in `synchronize'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /usr/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (234.3ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (6.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-02-05 21:59:55) [GET]
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user/register
+Completed in 27ms (View: 17, DB: 8) | 200 OK [http://localhost/user/register]
+  [4;35;1mSQL (0.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-02-05 22:00:06) [GET]
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user/register
+Completed in 41ms (View: 17, DB: 2) | 200 OK [http://localhost/user/register]
+  [4;35;1mSQL (15.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-02-05 22:00:08) [GET]
+  [4;36;1mUser Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user/register
+Completed in 17ms (View: 8, DB: 17) | 200 OK [http://localhost/user/register]
+  [4;35;1mSQL (7.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-02-05 22:00:18) [GET]
+  [4;36;1mUser Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user/register
+Completed in 30ms (View: 18, DB: 9) | 200 OK [http://localhost/user/register]
+  [4;35;1mSQL (7.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-02-05 22:00:25) [GET]
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user/register
+Completed in 30ms (View: 18, DB: 9) | 200 OK [http://localhost/user/register]
+  [4;35;1mSQL (3.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-02-05 22:00:43) [GET]
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user/register
+Completed in 32ms (View: 22, DB: 5) | 200 OK [http://localhost/user/register]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-02-05 22:01:47) [GET]
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user/register
+Completed in 34ms (View: 22, DB: 2) | 200 OK [http://localhost/user/register]
+  [4;35;1mSQL (9.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-02-05 22:02:01) [GET]
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user/register
+Completed in 14ms (View: 5, DB: 11) | 200 OK [http://localhost/user/register]
+  [4;35;1mSQL (7.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FeysbookController#index (for 127.0.0.1 at 2010-02-05 22:02:13) [GET]
+Redirected to http://localhost:3000/user/register
+Completed in 3ms (DB: 8) | 302 Found [http://localhost/]
+  [4;36;1mSQL (7.6ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-02-05 22:02:13) [GET]
+  [4;35;1mUser Columns (4.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user/register
+Completed in 20ms (View: 4, DB: 12) | 200 OK [http://localhost/user/register]
+  [4;36;1mSQL (25.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2010-02-05 22:02:17) [POST]
+  Parameters: {"authenticity_token"=>"WFFnOJNWEtgBj9do8RHeHYM7PnPXNXoU6ssvhCqVX18=", "login"=>"alda", "password"=>"heslo", "commit"=>"log in"}
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (5.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`login` = 'alda' AND `users`.`password` = '6e017b5464f820a6c1bb5e9f6d711a667a80d8ea') LIMIT 1[0m
+Redirected to http://localhost:3000/user/show
+Completed in 17ms (DB: 32) | 302 Found [http://localhost/user/login]
+  [4;35;1mSQL (0.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show (for 127.0.0.1 at 2010-02-05 22:02:17) [GET]
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/show
+Completed in 37ms (View: 19, DB: 3) | 200 OK [http://localhost/user/show]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show (for 127.0.0.1 at 2010-02-05 22:02:50) [GET]
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/show
+Completed in 34ms (View: 18, DB: 2) | 200 OK [http://localhost/user/show]
+  [4;35;1mSQL (28.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#x (for 127.0.0.1 at 2010-02-05 22:02:53) [GET]
+  [4;36;1mUser Columns (9.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+
+ActionController::UnknownAction (No action responded to x. Actions: index, login, logout, register, and show):
+  <internal:prelude>:8:in `synchronize'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (24.7ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#logout (for 127.0.0.1 at 2010-02-05 22:03:06) [GET]
+  [4;35;1mUser Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (3.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/logout
+Completed in 17ms (View: 3, DB: 30) | 200 OK [http://localhost/user/logout]

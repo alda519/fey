@@ -52,10 +52,20 @@ h2 {
   text-align: center;
 }
 
-#login_form {
-  background-color: #efefff;
+#register {
+/*  background-color: #efefff; */
+  padding: 50px;
 }
 
-#login_form table {
+#register table {
   margin: auto;
+}
+
+
+.foto {
+  float: left;
+  width: 150px;
+  height: 150px;
+  margin-right: 20px;
+  text-align: center;
 }

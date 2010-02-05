@@ -1,1 +1,14 @@
-<p>Tady bude hlavni stranka o uzivateli</p>
+<div class="foto">
+<%= image_tag 'rails.png' %>
+</div>
+
+<h3><%= @current_user.name %></h3>
+
+<p>mail: <%= @current_user.email %></p>
+<p>web: <%= link_to @current_user.web, @current_user.web %></p>
+
+<br clear="all" />
+
+<p>...</p>
+
+<p>...</p>

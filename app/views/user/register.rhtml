@@ -1,14 +1,12 @@
-<div id="login_form">
+<div id="register">
 <% form_for :register do |f| %>
 <table>
 <tr> <td>Login</td> <td><%= f.text_field :login %></td> </tr>
 <tr> <td>Heslo</td> <td> <%= f.password_field :password %></td> </tr>
-<tr> <td>Jméno</td> <td> <%= f.text_field :name %></td> </tr>
+<tr> <td><%= "Jméno"%></td> <td> <%= f.text_field :name %></td> </tr>
 <tr> <td>Email</td> <td> <%= f.text_field :email %></td> </tr>
 <tr> <td>Web</td> <td> <%= f.text_field :web %></td> </tr>
 <tr> <td colspan="2"><%= submit_tag 'zaregistrovat se' %></td> </tr>
 </table>
 <% end %>
 </div>
-
-<% #, :url => {:controller => 'user', :action => 'register'} %>
