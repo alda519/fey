@@ -24,7 +24,7 @@ class ApplicationController < ActionController::Base
 
   def login_required
     return true if logged_in?
-    session[:return_to] = request.requested_uri
+    #session[:return_to] = request.requested_uri
     redirect_to :controller => 'user', :action => 'login' and return false
   end
 
