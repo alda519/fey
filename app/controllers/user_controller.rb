@@ -31,7 +31,7 @@ class UserController < ApplicationController
   def register
     @user = User.new params[:register]
     if request.post? and @user.save
-      session[:user_id] = @current_user.id
+      session[:user_id] = @user.id
       redirect_to :controller => 'user', :action => 'show'
     end
   end
