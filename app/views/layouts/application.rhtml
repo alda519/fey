@@ -7,9 +7,32 @@
 </head>
 <body>
 
-<div id="heading"><%= image_tag 'logo.png', :id => 'logo' %></div>
+<div id="heading">
+  <%= image_tag 'logo.png', :id => 'logo' %>
+  <div id="top_login">
+<% unless logged_in? %>
+  <% form_tag '/user/login' do %>
+    <table>
+    <tr><td>login</td><td>heslo</td><td> </td></tr>
+    <tr>
+    <td><%=text_field_tag 'login', nil, :size => 10%>
+    <td><%=password_field_tag 'password', nil, :size => 10%></td>
+    <td><%=submit_tag "log in" %></td>
+    </tr>
+    </table>
+  <% end %>
+<% else %>
+  <br />
+  <br />
+  přihlášen <%= @current_user.name %> | 
+  <%= link_to 'odhlásit se', :controller => 'user', :action => 'logout' %>
+<% end %>
+  </div>
+</div>
 
 <div id="content">
+<h1>Asociálni síť</h1>
+<h2>aneb vystačíme si sami</h2>
 
 <%= yield %>
 

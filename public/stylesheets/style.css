@@ -3,14 +3,59 @@ body {
   background-repeat: repeat-x;
 }
 
+h1 {
+  padding-left: 40px;
+  margin-bottom: 0px;
+}
+
+h2 {
+  padding-left: 280px;
+  margin-top: 0px;
+  margin-bottom: 50px;
+  position: relative;
+  bottom: 15px;
+}
+
 #heading {
   width: 880px;
   margin: auto;
+  position: relative;
+  font-size: 70%;
+  color: #fff;
 }
 
+#heading a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#heading a:hover {
+  text-decoration: underline;
+}
+
+#top_login {
+  position: absolute;
+  bottom: 20px;
+  right: 0px;
+}
+
+#logo {
+}
 
 #content {
   width: 880px;
   margin: auto;
   background-color: #fff; 
+}
+
+#login, #password {
+  text-align: center;
+}
+
+#login_form {
+  background-color: #efefff;
+}
+
+#login_form table {
+  margin: auto;
 }
