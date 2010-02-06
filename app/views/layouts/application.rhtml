@@ -7,7 +7,8 @@
 </head>
 <body>
 
-<div id="heading">
+<div id="blue_bar">
+<div id="heading" class="content">
   <%= link_to( image_tag('logo.png'), :controller => 'feysbook', :action => 'index') %>
   <div id="top_login">
 <% unless logged_in? %>
@@ -29,13 +30,16 @@
 <% end %>
   </div>
 </div>
+</div>
 
-<div id="content">
+<div class="content">
 <h1>Asociální síť</h1>
 <h2>aneb vystačíme si sami</h2>
+</div>
 
-
-<div id="menu">
+<div id="lightblue_bar">
+<div id="menu" class="content">
+<% if logged_in? %>
 <%= link_to_if controller.action_name == 'wall', 'wall', {:controller => 'user', :action => 'wall'}, :id => 'active' do 
   link_to 'wall', :controller => 'user', :action => 'wall' 
 end
@@ -48,12 +52,17 @@ end
   link_to 'foto', :controller => 'user', :action => 'foto' 
 end
 %>
+<% else %>
+<%= link_to_if controller.action_name == 'login', 'Přihlásit se', {:controller => 'user', :action => 'foto'}, :id => 'active' do
+  link_to 'Přihlásit se', :controller => 'user', :action => 'login'; end %>
+<%= link_to_if controller.action_name == 'register', 'Zaregistrovat se', {:controller => 'user', :action => 'foto'}, :id => 'active' do
+  link_to 'Zaregistrovat se', :controller => 'user', :action => 'register'; end %>
+<% end %>
+</div>
 </div>
 
+<div class="content">
 <%= yield %>
-
-<%=  %>
-
 </div>
 
 </body>

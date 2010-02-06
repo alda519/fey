@@ -1,6 +1,8 @@
 body {
-  background-image: url('/images/bg.png');
-  background-repeat: repeat-x;
+/*  background-image: url('/images/larry.png');
+  background-repeat: no-repeat;
+  background-position: center  0px; */
+  margin: 0px;
 }
 
 h1 {
@@ -16,18 +18,17 @@ h2 {
   bottom: 15px;
 }
 
-#heading {
-  width: 880px;
-  margin: auto;
-  position: relative;
-  font-size: 70%;
-  color: #fff;
+
+
+#blue_bar {
+  background-color: #3b5998;
 }
 
-#content {
-  width: 880px;
-  margin: auto;
-  background-color: #fff; 
+#heading {
+  height: 75px;
+  background-color: #3b5998;
+  font-size: 70%;
+  color: #fff;
 }
 
 #heading a {
@@ -40,7 +41,16 @@ h2 {
 }
 
 #heading img {
-  border: 0px;
+  border: 0px; 
+}
+
+
+
+.content {
+  width: 880px;
+  margin: auto;
+  position: relative;
+  padding: 0px 10px 0px 10px;
 }
 
 
@@ -54,12 +64,15 @@ h2 {
 
 
 
+#lightblue_bar {
+  background-color: #e0e0f3;
+}
 
 #menu {
   text-align: center;
+  position: relative;
   margin-bottom: 30px;
-  background-color: #e0e0f3;
-  padding: 3px 15px 3px 15px;
+  padding: 3px 10px 3px 10px;
 }
 
 #menu a {
@@ -90,12 +103,12 @@ h2 {
   text-align: center;
 }
 
-#register {
-/*  background-color: #efefff; */
+#form {
   padding: 50px;
+  text-align: center;
 }
 
-#register table {
+#form table {
   margin: auto;
 }
 
@@ -139,4 +152,11 @@ h2 {
 .wall {
   width: 600px;
   float: left; 
+}
+
+
+
+#cow {
+  margin: auto;
+  text-align: center;
 }
