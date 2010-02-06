@@ -1,5 +1,4 @@
-<% # error_messages_for 'user' %>
-
+<div id="register">
 <% form_for :register do |f| %>
 <table>
 <tr> <td>Login</td> <td><%= f.text_field :login %></td> </tr>
@@ -10,3 +9,4 @@
 <tr> <td colspan="2"><%= submit_tag 'zaregistrovat se' %></td> </tr>
 </table>
 <% end %>
+</div>
