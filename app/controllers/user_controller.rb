@@ -1,6 +1,6 @@
 class UserController < ApplicationController
 
-  before_filter :login_required, :only => [:show, :logout]
+  before_filter :login_required, :only => [:show, :logout, :wall, :foto]
 
   def index
     redirect_to :controller => 'feysbook'
@@ -33,6 +33,20 @@ class UserController < ApplicationController
     if request.post? and @user.save
       session[:user_id] = @user.id
       redirect_to :controller => 'user', :action => 'show'
+    end
+  end
+
+  def wall
+  end
+
+  def foto
+  end
+
+  def newbrick
+    @brick = Brick.new params[:brick]
+    @brick.user_id = @current_user.id
+    if request.post? and @brick.save
+      redirect_to :action => 'wall'
     end
   end
 

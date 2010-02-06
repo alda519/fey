@@ -8,7 +8,7 @@
 <body>
 
 <div id="heading">
-  <%= image_tag 'logo.png', :id => 'logo' %>
+  <%= link_to( image_tag('logo.png'), :controller => 'feysbook', :action => 'index') %>
   <div id="top_login">
 <% unless logged_in? %>
   <% form_tag '/user/login' do %>
@@ -34,7 +34,25 @@
 <h1>Asociální síť</h1>
 <h2>aneb vystačíme si sami</h2>
 
+
+<div id="menu">
+<%= link_to_if controller.action_name == 'wall', 'wall', {:controller => 'user', :action => 'wall'}, :id => 'active' do 
+  link_to 'wall', :controller => 'user', :action => 'wall' 
+end
+%>
+<%= link_to_if controller.action_name == 'show', 'info', {:controller => 'user', :action => 'show'}, :id => 'active' do
+  link_to 'info', :controller => 'user', :action => 'show' 
+end
+%>
+<%= link_to_if controller.action_name == 'foto', 'foto', {:controller => 'user', :action => 'foto'}, :id => 'active' do
+  link_to 'foto', :controller => 'user', :action => 'foto' 
+end
+%>
+</div>
+
 <%= yield %>
+
+<%=  %>
 
 </div>
 

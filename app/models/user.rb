@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
 
   belongs_to :group
 
+  has_many :bricks
+
   before_create :hash_password
   
   private

@@ -11,7 +11,7 @@ h1 {
 h2 {
   padding-left: 280px;
   margin-top: 0px;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
   position: relative;
   bottom: 15px;
 }
@@ -24,6 +24,12 @@ h2 {
   color: #fff;
 }
 
+#content {
+  width: 880px;
+  margin: auto;
+  background-color: #fff; 
+}
+
 #heading a {
   text-decoration: none;
   color: #fff;
@@ -33,20 +39,52 @@ h2 {
   text-decoration: underline;
 }
 
+#heading img {
+  border: 0px;
+}
+
+
+
+
 #top_login {
   position: absolute;
   bottom: 20px;
   right: 0px;
 }
 
-#logo {
+
+
+
+#menu {
+  text-align: center;
+  margin-bottom: 30px;
+  background-color: #ededfe;
+  padding: 3px 15px 3px 15px;
+  /* border-bottom: 1px solid #ededee; */
 }
 
-#content {
-  width: 880px;
-  margin: auto;
-  background-color: #fff; 
+#menu a {
+  margin-left: 30px;
+  margin-right: 30px;
+  text-decoration: none;
+  padding: 0px 15px 3px 15px;
+
+  border-left: 3px solid #eef;
+  border-right: 3px solid #eef;
+  border-top: 3px solid #eef;
+  /*background-color: #ededfe;*/
 }
+
+#menu a:hover {
+  background-color: #66f;
+  color: #fff;
+}
+
+#active {
+  background-color: #fff;
+}
+
+
 
 #login, #password {
   text-align: center;
@@ -62,10 +100,43 @@ h2 {
 }
 
 
+
 .avatar {
   float: left;
   width: 150px;
   height: 150px;
   margin-right: 20px;
   text-align: center;
+}
+
+
+
+.brick {
+  background-color: #fcfcff;
+  border: 2px solid #babaff;
+  float: left;
+  margin: 2px;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+}
+
+.brick img {
+  float: left;
+  margin-right: 5px;
+}
+
+.brick h3 {
+  background-color: #ececff;
+  margin-top: 0px;
+}
+
+
+.board {
+  width: 200px;
+  float: left;
+}
+
+.wall {
+  width: 600px;
+  float: left; 
 }
