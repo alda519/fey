@@ -4,8 +4,13 @@
 
 <h3><%= @current_user.name %></h3>
 
-<p>mail: <%= @current_user.email %></p>
-<p>web: <%= link_to @current_user.web, @current_user.web %></p>
+<p>mail: <%= mail_to @current_user.email %></p>
+<p>web:
+<%= link_to_if(@current_user.web =~ /^http:\/\//,  @current_user.web, @current_user.web) do
+  link_to @current_user.web, "http://" + @current_user.web
+end
+%>
+</p>
 
 <br clear="all" />
 
