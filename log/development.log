@@ -4960,3 +4960,472 @@ Processing UserController#logout (for 127.0.0.1 at 2010-02-05 22:03:06) [GET]
 Rendering template within layouts/application
 Rendering user/logout
 Completed in 17ms (View: 3, DB: 30) | 200 OK [http://localhost/user/logout]
+  [4;36;1mSQL (24.4ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FeysbookController#index (for 127.0.0.1 at 2010-02-06 08:10:57) [GET]
+Redirected to http://localhost:3000/user/register
+Completed in 34ms (DB: 24) | 302 Found [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-02-06 08:10:57) [GET]
+  [4;36;1mUser Columns (36.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user/register
+Completed in 265ms (View: 171, DB: 36) | 200 OK [http://localhost/user/register]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-02-06 08:11:12) [POST]
+  Parameters: {"authenticity_token"=>"SSsWxK5y13sEgA6izefD6NVXywDsfK1aZd8LQfrd18Q=", "register"=>{"login"=>"", "password"=>"", "name"=>"", "email"=>"", "web"=>""}, "commit"=>"zaregistrovat se"}
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering user/register
+Completed in 19ms (View: 4, DB: 2) | 200 OK [http://localhost/user/register]
+  [4;35;1mSQL (45.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-02-06 08:17:12) [POST]
+  Parameters: {"authenticity_token"=>"SSsWxK5y13sEgA6izefD6NVXywDsfK1aZd8LQfrd18Q=", "register"=>{"login"=>"", "password"=>"", "name"=>"", "email"=>"", "web"=>""}, "commit"=>"zaregistrovat se"}
+  [4;36;1mUser Columns (129.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering user/register
+Completed in 226ms (View: 5, DB: 175) | 200 OK [http://localhost/user/register]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-02-06 08:19:56) [POST]
+  Parameters: {"authenticity_token"=>"SSsWxK5y13sEgA6izefD6NVXywDsfK1aZd8LQfrd18Q=", "register"=>{"login"=>"", "password"=>"", "name"=>"", "email"=>"", "web"=>""}, "commit"=>"zaregistrovat se"}
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering user/register
+Completed in 42ms (View: 28, DB: 2) | 200 OK [http://localhost/user/register]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-02-06 08:20:08) [POST]
+  Parameters: {"authenticity_token"=>"SSsWxK5y13sEgA6izefD6NVXywDsfK1aZd8LQfrd18Q=", "register"=>{"login"=>"", "password"=>"", "name"=>"", "email"=>"", "web"=>""}, "commit"=>"zaregistrovat se"}
+  [4;36;1mUser Columns (5.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (2.9ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering user/register
+Completed in 99ms (View: 30, DB: 9) | 200 OK [http://localhost/user/register]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-02-06 08:21:31) [POST]
+  Parameters: {"authenticity_token"=>"SSsWxK5y13sEgA6izefD6NVXywDsfK1aZd8LQfrd18Q=", "register"=>{"login"=>"", "password"=>"", "name"=>"", "email"=>"", "web"=>""}, "commit"=>"zaregistrovat se"}
+  [4;36;1mUser Columns (3.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering user/register
+Completed in 117ms (View: 37, DB: 5) | 200 OK [http://localhost/user/register]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-02-06 08:21:39) [POST]
+  Parameters: {"authenticity_token"=>"SSsWxK5y13sEgA6izefD6NVXywDsfK1aZd8LQfrd18Q=", "register"=>{"login"=>"sd", "password"=>"", "name"=>"", "email"=>"", "web"=>""}, "commit"=>"zaregistrovat se"}
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering user/register
+Completed in 26ms (View: 8, DB: 2) | 200 OK [http://localhost/user/register]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-02-06 08:24:57) [POST]
+  Parameters: {"authenticity_token"=>"SSsWxK5y13sEgA6izefD6NVXywDsfK1aZd8LQfrd18Q=", "register"=>{"login"=>"sd", "password"=>"", "name"=>"", "email"=>"", "web"=>""}, "commit"=>"zaregistrovat se"}
+  [4;36;1mUser Columns (52.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (14.8ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering user/register
+Completed in 414ms (View: 292, DB: 67) | 200 OK [http://localhost/user/register]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-02-06 08:29:46) [POST]
+  Parameters: {"authenticity_token"=>"SSsWxK5y13sEgA6izefD6NVXywDsfK1aZd8LQfrd18Q=", "register"=>{"login"=>"alda", "password"=>"", "name"=>"", "email"=>"", "web"=>""}, "commit"=>"zaregistrovat se"}
+  [4;36;1mSQL (152.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+
+NoMethodError (undefined method `validates_uniquenees_of' for #<Class:0xaf0fd18>):
+  app/models/user.rb:4:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/user_controller.rb:32:in `register'
+  <internal:prelude>:8:in `synchronize'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (179.0ms)
+Rendered rescues/_request_and_response (17.8ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (15.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-02-06 08:30:13) [POST]
+  Parameters: {"authenticity_token"=>"SSsWxK5y13sEgA6izefD6NVXywDsfK1aZd8LQfrd18Q=", "register"=>{"login"=>"alda", "password"=>"", "name"=>"", "email"=>"", "web"=>""}, "commit"=>"zaregistrovat se"}
+  [4;35;1mUser Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (215.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY 'alda') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering user/register
+Completed in 484ms (View: 28, DB: 233) | 200 OK [http://localhost/user/register]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FeysbookController#index (for 127.0.0.1 at 2010-02-06 08:38:34) [GET]
+Redirected to http://localhost:3000/user/register
+Completed in 3ms (DB: 0) | 302 Found [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-02-06 08:38:34) [GET]
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user/register
+Completed in 107ms (View: 84, DB: 2) | 200 OK [http://localhost/user/register]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-02-06 08:38:37) [POST]
+  Parameters: {"authenticity_token"=>"SSsWxK5y13sEgA6izefD6NVXywDsfK1aZd8LQfrd18Q=", "register"=>{"login"=>"", "password"=>"", "name"=>"", "email"=>"", "web"=>""}, "commit"=>"zaregistrovat se"}
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY '') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering user/register
+Completed in 41ms (View: 25, DB: 3) | 200 OK [http://localhost/user/register]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-02-06 08:40:25) [GET]
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user/register
+Completed in 30ms (View: 21, DB: 2) | 200 OK [http://localhost/user/register]
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-02-06 08:40:29) [POST]
+  Parameters: {"authenticity_token"=>"SSsWxK5y13sEgA6izefD6NVXywDsfK1aZd8LQfrd18Q=", "register"=>{"login"=>"d", "password"=>"", "name"=>"", "email"=>"", "web"=>""}, "commit"=>"zaregistrovat se"}
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (23.9ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY 'd') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering user/register
+Completed in 55ms (View: 13, DB: 27) | 200 OK [http://localhost/user/register]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-02-06 08:42:01) [POST]
+  Parameters: {"authenticity_token"=>"SSsWxK5y13sEgA6izefD6NVXywDsfK1aZd8LQfrd18Q=", "register"=>{"login"=>"d", "password"=>"", "name"=>"", "email"=>"", "web"=>""}, "commit"=>"zaregistrovat se"}
+  [4;36;1mUser Columns (7.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY 'd') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering user/register
+Completed in 106ms (View: 48, DB: 8) | 200 OK [http://localhost/user/register]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-02-06 08:42:51) [POST]
+  Parameters: {"authenticity_token"=>"SSsWxK5y13sEgA6izefD6NVXywDsfK1aZd8LQfrd18Q=", "register"=>{"login"=>"d", "password"=>"", "name"=>"", "email"=>"", "web"=>""}, "commit"=>"zaregistrovat se"}
+  [4;35;1mUser Columns (3.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (3.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY 'd') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering user/register
+Completed in 116ms (View: 55, DB: 7) | 200 OK [http://localhost/user/register]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-02-06 08:47:14) [GET]
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user/register
+
+ActionView::TemplateError (undefined method `error_messages_on' for #<ActionView::Base:0xaa8c4ac>) on line #3 of app/views/user/register.rhtml:
+1: <% # error_messages_for 'user' %>
+2: 
+3: <%= error_messages_on 'user', 'login' %>
+4: <%= error_messages_on 'user', 'password' %>
+5: <%= error_messages_on 'user', 'name' %>
+6: <%= error_messages_on 'user', 'email' %>
+
+    app/views/user/register.rhtml:3:in `_run_rhtml_app47views47user47register46rhtml'
+    <internal:prelude>:8:in `synchronize'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /usr/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (112.0ms)
+Rendered rescues/_request_and_response (2.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-02-06 08:47:58) [GET]
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user/register
+Completed in 30ms (View: 21, DB: 2) | 200 OK [http://localhost/user/register]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-02-06 08:48:04) [POST]
+  Parameters: {"authenticity_token"=>"SSsWxK5y13sEgA6izefD6NVXywDsfK1aZd8LQfrd18Q=", "register"=>{"login"=>"a", "password"=>"", "name"=>"", "email"=>"", "web"=>""}, "commit"=>"zaregistrovat se"}
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY 'a') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering user/register
+Completed in 32ms (View: 12, DB: 2) | 200 OK [http://localhost/user/register]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-02-06 08:48:12) [POST]
+  Parameters: {"authenticity_token"=>"SSsWxK5y13sEgA6izefD6NVXywDsfK1aZd8LQfrd18Q=", "register"=>{"login"=>"alda", "password"=>"", "name"=>"", "email"=>"", "web"=>""}, "commit"=>"zaregistrovat se"}
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY 'alda') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering user/register
+Completed in 31ms (View: 11, DB: 3) | 200 OK [http://localhost/user/register]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-02-06 08:50:18) [POST]
+  Parameters: {"authenticity_token"=>"SSsWxK5y13sEgA6izefD6NVXywDsfK1aZd8LQfrd18Q=", "register"=>{"login"=>"alda", "password"=>"", "name"=>"", "email"=>"", "web"=>""}, "commit"=>"zaregistrovat se"}
+  [4;36;1mUser Columns (6.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (20.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (3.6ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY 'alda') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering user/register
+Completed in 133ms (View: 48, DB: 31) | 200 OK [http://localhost/user/register]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-02-06 08:51:24) [POST]
+  Parameters: {"authenticity_token"=>"SSsWxK5y13sEgA6izefD6NVXywDsfK1aZd8LQfrd18Q=", "register"=>{"login"=>"alda", "password"=>"", "name"=>"", "email"=>"", "web"=>""}, "commit"=>"zaregistrovat se"}
+  [4;35;1mUser Columns (3.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY 'alda') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering user/register
+Completed in 92ms (View: 49, DB: 4) | 200 OK [http://localhost/user/register]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-02-06 08:51:34) [POST]
+  Parameters: {"authenticity_token"=>"SSsWxK5y13sEgA6izefD6NVXywDsfK1aZd8LQfrd18Q=", "register"=>{"login"=>"alda", "password"=>"", "name"=>"", "email"=>"", "web"=>""}, "commit"=>"zaregistrovat se"}
+  [4;36;1mUser Columns (14.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (3.5ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY 'alda') LIMIT 1[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering user/register
+Completed in 219ms (View: 151, DB: 19) | 200 OK [http://localhost/user/register]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-02-06 08:54:26) [POST]
+  Parameters: {"authenticity_token"=>"SSsWxK5y13sEgA6izefD6NVXywDsfK1aZd8LQfrd18Q=", "register"=>{"login"=>"alda", "password"=>"", "name"=>"", "email"=>"", "web"=>""}, "commit"=>"zaregistrovat se"}
+  [4;35;1mUser Columns (7.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (5.4ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY 'alda') LIMIT 1[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering user/register
+Completed in 99ms (View: 28, DB: 17) | 200 OK [http://localhost/user/register]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-02-06 08:54:52) [POST]
+  Parameters: {"authenticity_token"=>"SSsWxK5y13sEgA6izefD6NVXywDsfK1aZd8LQfrd18Q=", "register"=>{"login"=>"loo", "password"=>"loo", "name"=>"loo", "email"=>"loo", "web"=>"neco.nekde.cz"}, "commit"=>"zaregistrovat se"}
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY 'loo') LIMIT 1[0m
+  [4;35;1mUser Create (9.4ms)[0m   [0mINSERT INTO `users` (`login`, `name`, `email`, `web`, `group`, `created_at`, `updated_at`, `password`) VALUES('loo', 'loo', 'loo', 'neco.nekde.cz', NULL, '2010-02-06 07:54:52', '2010-02-06 07:54:52', '02b348c3eda66d515643dc2aa4730d4fb94f6177')[0m
+  [4;36;1mSQL (40.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/user/show
+Completed in 73ms (DB: 52) | 302 Found [http://localhost/user/register]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show (for 127.0.0.1 at 2010-02-06 08:54:52) [GET]
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/show
+Completed in 55ms (View: 28, DB: 2) | 200 OK [http://localhost/user/show]
+  [4;36;1mSQL (1.6ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#logout (for 127.0.0.1 at 2010-02-06 08:55:10) [GET]
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/logout
+Completed in 81ms (View: 67, DB: 4) | 200 OK [http://localhost/user/logout]
+  [4;35;1mSQL (3.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#logout (for 127.0.0.1 at 2010-02-06 08:55:14) [GET]
+Redirected to http://localhost:3000/user/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 3) | 302 Found [http://localhost/user/logout]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2010-02-06 08:55:14) [GET]
+Rendering template within layouts/application
+Rendering user/login
+Completed in 76ms (View: 73, DB: 0) | 200 OK [http://localhost/user/login]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2010-02-06 08:55:25) [POST]
+  Parameters: {"authenticity_token"=>"SSsWxK5y13sEgA6izefD6NVXywDsfK1aZd8LQfrd18Q=", "login"=>"alda", "password"=>"heslo", "commit"=>"P\xC5\x99ihl\xC3\xA1sit", "id"=>"login"}
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'alda' AND `users`.`password` = '6e017b5464f820a6c1bb5e9f6d711a667a80d8ea') LIMIT 1[0m
+Redirected to http://localhost:3000/user/show
+Completed in 17ms (DB: 2) | 302 Found [http://localhost/user/login/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show (for 127.0.0.1 at 2010-02-06 08:55:25) [GET]
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (2.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/show
+Completed in 18ms (View: 3, DB: 4) | 200 OK [http://localhost/user/show]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FeysbookController#index (for 127.0.0.1 at 2010-02-06 09:14:03) [GET]
+  [4;36;1mUser Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (3.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering feysbook/index
+Completed in 89ms (View: 63, DB: 7) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-02-06 09:14:11) [GET]
+  [4;35;1mUser Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 12ms (DB: 2) | 302 Found [http://localhost/user]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FeysbookController#index (for 127.0.0.1 at 2010-02-06 09:14:11) [GET]
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering feysbook/index
+Completed in 18ms (View: 2, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show (for 127.0.0.1 at 2010-02-06 09:14:16) [GET]
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.7ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/show
+Completed in 26ms (View: 3, DB: 3) | 200 OK [http://localhost/user/show]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show (for 127.0.0.1 at 2010-02-06 09:15:51) [GET]
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/show
+Completed in 118ms (View: 104, DB: 2) | 200 OK [http://localhost/user/show]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show (for 127.0.0.1 at 2010-02-06 09:15:55) [GET]
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/show
+Completed in 17ms (View: 3, DB: 2) | 200 OK [http://localhost/user/show]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FeysbookController#index (for 127.0.0.1 at 2010-02-06 09:16:00) [GET]
+  [4;36;1mUser Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering feysbook/index
+Completed in 23ms (View: 6, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show (for 127.0.0.1 at 2010-02-06 09:16:39) [GET]
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/show
+Completed in 26ms (View: 3, DB: 2) | 200 OK [http://localhost/user/show]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show (for 127.0.0.1 at 2010-02-06 09:20:02) [GET]
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/show
+Completed in 19ms (View: 3, DB: 2) | 200 OK [http://localhost/user/show]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show (for 127.0.0.1 at 2010-02-06 09:24:14) [GET]
+  [4;35;1mUser Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/show
+Completed in 33ms (View: 19, DB: 3) | 200 OK [http://localhost/user/show]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show (for 127.0.0.1 at 2010-02-06 09:24:28) [GET]
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/show
+Completed in 25ms (View: 3, DB: 2) | 200 OK [http://localhost/user/show]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show (for 127.0.0.1 at 2010-02-06 09:25:32) [GET]
+  [4;35;1mUser Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/show
+Completed in 35ms (View: 17, DB: 3) | 200 OK [http://localhost/user/show]

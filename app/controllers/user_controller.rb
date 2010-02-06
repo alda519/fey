@@ -1,6 +1,6 @@
 class UserController < ApplicationController
 
-  before_filter :login_required, :only => [:show]
+  before_filter :login_required, :only => [:show, :logout]
 
   def index
     redirect_to :controller => 'feysbook'

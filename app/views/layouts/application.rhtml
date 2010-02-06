@@ -24,7 +24,7 @@
 <% else %>
   <br />
   <br />
-  přihlášen <%= @current_user.name %> | 
+  přihlášen <%= link_to @current_user.name, '/user/show' %> | 
   <%= link_to 'odhlásit se', :controller => 'user', :action => 'logout' %>
 <% end %>
   </div>

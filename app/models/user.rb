@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
 
   validates_presence_of :login, :password, :name, :email
+  validates_uniqueness_of :login
 
   belongs_to :group
 
