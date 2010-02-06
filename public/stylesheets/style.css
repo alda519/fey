@@ -58,7 +58,7 @@ h2 {
 #menu {
   text-align: center;
   margin-bottom: 30px;
-  background-color: #ededfe;
+  background-color: #e0e0f3;
   padding: 3px 15px 3px 15px;
   /* border-bottom: 1px solid #ededee; */
 }
@@ -69,9 +69,9 @@ h2 {
   text-decoration: none;
   padding: 0px 15px 3px 15px;
 
-  border-left: 3px solid #eef;
-  border-right: 3px solid #eef;
-  border-top: 3px solid #eef;
+  border-left: 3px solid #e0e0f3;
+  border-right: 3px solid #e0e0f3;
+  border-top: 3px solid #e0e0f3;
   /*background-color: #ededfe;*/
 }
 
@@ -114,10 +114,10 @@ h2 {
 .brick {
   background-color: #fcfcff;
   border: 2px solid #babaff;
-  float: left;
   margin: 2px;
   margin-bottom: 5px;
   padding-bottom: 5px;
+  overflow: auto;
 }
 
 .brick img {
