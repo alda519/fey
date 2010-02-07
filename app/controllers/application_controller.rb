@@ -8,6 +8,8 @@ class ApplicationController < ActionController::Base
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
 
+  filter_parameter_logging :name, :password, :mail
+
   before_filter :fetch_logged_in_user
 
   protected
