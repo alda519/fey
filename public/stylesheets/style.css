@@ -132,19 +132,19 @@ h2 {
 /*  padding-bottom: 5px; */
   overflow: auto;
   position: relative;
+  padding-left: 10px;
 }
 
 .brick img {
   float: left;
   margin-right: 10px;
-/*  border-right: 2px solid #babaff; */
-/*  border-bottom: 2px solid #babaff; */
+  margin-top: 10px;
 }
 
 .brick h3 {
-  background-color:#babaff/* #ececff*/;
-  margin-top: 0px;
-  margin-bottom: 5px;
+  background-color:#babaff;
+  margin: 0px 0px 5px 90px;
+  padding-left: 10px;
 }
 
 .date {

@@ -18872,3 +18872,530 @@ Rendered user/_brick (3.5ms)
 Rendered user/_brick (0.6ms)
 Rendered user/_brick (0.3ms)
 Completed in 36ms (View: 11, DB: 6) | 200 OK [http://localhost/user/wall]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#wall (for 127.0.0.1 at 2010-02-07 08:59:45) [GET]
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;35;1mBrick Load (2.4ms)[0m   [0mSELECT * FROM `bricks` WHERE (`bricks`.user_id = 2) ORDER BY created_at desc LIMIT 8[0m
+Rendering template within layouts/application
+Rendering user/wall
+  [4;36;1mBrick Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `bricks`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM `bricks` WHERE (`bricks`.user_id = 2) [0m
+Rendered user/_brick (3.4ms)
+Rendered user/_brick (0.5ms)
+Rendered user/_brick (0.3ms)
+Completed in 38ms (View: 11, DB: 6) | 200 OK [http://localhost/user/wall]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#wall (for 127.0.0.1 at 2010-02-07 09:00:02) [GET]
+  [4;35;1mUser Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;35;1mBrick Load (0.7ms)[0m   [0mSELECT * FROM `bricks` WHERE (`bricks`.user_id = 2) ORDER BY created_at desc LIMIT 8[0m
+Rendering template within layouts/application
+Rendering user/wall
+  [4;36;1mBrick Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `bricks`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM `bricks` WHERE (`bricks`.user_id = 2) [0m
+Rendered user/_brick (5.6ms)
+Rendered user/_brick (0.6ms)
+Rendered user/_brick (0.4ms)
+Completed in 137ms (View: 14, DB: 5) | 200 OK [http://localhost/user/wall]
+  [4;36;1mSQL (1.6ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#wall (for 127.0.0.1 at 2010-02-07 09:00:16) [GET]
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;35;1mBrick Load (0.7ms)[0m   [0mSELECT * FROM `bricks` WHERE (`bricks`.user_id = 2) ORDER BY created_at desc LIMIT 8[0m
+Rendering template within layouts/application
+Rendering user/wall
+  [4;36;1mBrick Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `bricks`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM `bricks` WHERE (`bricks`.user_id = 2) [0m
+Rendered user/_brick (3.3ms)
+Rendered user/_brick (0.5ms)
+Rendered user/_brick (0.3ms)
+Completed in 36ms (View: 11, DB: 7) | 200 OK [http://localhost/user/wall]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#newbrick (for 127.0.0.1 at 2010-02-07 09:00:45) [POST]
+  Parameters: {"authenticity_token"=>"SSsWxK5y13sEgA6izefD6NVXywDsfK1aZd8LQfrd18Q=", "brick"=>{"title"=>"kratke", "text"=>"kratocky text"}, "commit"=>"pov\xC4\x9Bsit na ze\xC4\x8F"}
+  [4;35;1mUser Columns (4.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;35;1mBrick Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `bricks`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mBrick Create (0.5ms)[0m   [0mINSERT INTO `bricks` (`user_id`, `title`, `text`, `created_at`, `updated_at`) VALUES(2, 'kratke', 'kratocky text', '2010-02-07 08:00:45', '2010-02-07 08:00:45')[0m
+  [4;36;1mSQL (17.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/user/wall
+Completed in 58ms (DB: 24) | 302 Found [http://localhost/user/newbrick]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#wall (for 127.0.0.1 at 2010-02-07 09:00:45) [GET]
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;36;1mBrick Load (2.5ms)[0m   [0;1mSELECT * FROM `bricks` WHERE (`bricks`.user_id = 2) ORDER BY created_at desc LIMIT 8[0m
+Rendering template within layouts/application
+Rendering user/wall
+  [4;35;1mBrick Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `bricks`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM `bricks` WHERE (`bricks`.user_id = 2) [0m
+Rendered user/_brick (3.1ms)
+Rendered user/_brick (3.4ms)
+Rendered user/_brick (0.4ms)
+Rendered user/_brick (0.3ms)
+Completed in 42ms (View: 14, DB: 6) | 200 OK [http://localhost/user/wall]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#newbrick (for 127.0.0.1 at 2010-02-07 09:01:09) [POST]
+  Parameters: {"authenticity_token"=>"SSsWxK5y13sEgA6izefD6NVXywDsfK1aZd8LQfrd18Q=", "brick"=>{"title"=>"testik", "text"=>"popup => true || array of window options - This will force the link to open in a popup window. By passing true, a default browser window will be opened with the URL. You"}, "commit"=>"pov\xC4\x9Bsit na ze\xC4\x8F"}
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;36;1mBrick Columns (3.3ms)[0m   [0;1mSHOW FIELDS FROM `bricks`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mBrick Create (0.4ms)[0m   [0;1mINSERT INTO `bricks` (`user_id`, `title`, `text`, `created_at`, `updated_at`) VALUES(2, 'testik', 'popup => true || array of window options - This will force the link to open in a popup window. By passing true, a default browser window will be opened with the URL. You', '2010-02-07 08:01:09', '2010-02-07 08:01:09')[0m
+  [4;35;1mSQL (22.4ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/user/wall
+Completed in 54ms (DB: 29) | 302 Found [http://localhost/user/newbrick]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#wall (for 127.0.0.1 at 2010-02-07 09:01:09) [GET]
+  [4;35;1mUser Columns (3.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;35;1mBrick Load (0.7ms)[0m   [0mSELECT * FROM `bricks` WHERE (`bricks`.user_id = 2) ORDER BY created_at desc LIMIT 8[0m
+Rendering template within layouts/application
+Rendering user/wall
+  [4;36;1mBrick Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `bricks`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM `bricks` WHERE (`bricks`.user_id = 2) [0m
+Rendered user/_brick (5.3ms)
+Rendered user/_brick (0.7ms)
+Rendered user/_brick (0.6ms)
+Rendered user/_brick (0.4ms)
+Rendered user/_brick (0.3ms)
+Completed in 39ms (View: 15, DB: 7) | 200 OK [http://localhost/user/wall]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#wall (for 127.0.0.1 at 2010-02-07 09:01:40) [GET]
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;35;1mBrick Load (0.7ms)[0m   [0mSELECT * FROM `bricks` WHERE (`bricks`.user_id = 2) ORDER BY created_at desc LIMIT 8[0m
+Rendering template within layouts/application
+Rendering user/wall
+  [4;36;1mBrick Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `bricks`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM `bricks` WHERE (`bricks`.user_id = 2) [0m
+Rendered user/_brick (3.3ms)
+Rendered user/_brick (0.5ms)
+Rendered user/_brick (0.4ms)
+Rendered user/_brick (0.3ms)
+Rendered user/_brick (0.4ms)
+Completed in 37ms (View: 15, DB: 5) | 200 OK [http://localhost/user/wall]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#wall (for 127.0.0.1 at 2010-02-07 09:02:23) [GET]
+  [4;35;1mUser Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;35;1mBrick Load (0.7ms)[0m   [0mSELECT * FROM `bricks` WHERE (`bricks`.user_id = 2) ORDER BY created_at desc LIMIT 8[0m
+Rendering template within layouts/application
+Rendering user/wall
+  [4;36;1mBrick Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `bricks`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT count(*) AS count_all FROM `bricks` WHERE (`bricks`.user_id = 2) [0m
+Rendered user/_brick (5.0ms)
+Rendered user/_brick (0.6ms)
+Rendered user/_brick (0.4ms)
+Rendered user/_brick (0.3ms)
+Rendered user/_brick (0.3ms)
+Completed in 51ms (View: 29, DB: 5) | 200 OK [http://localhost/user/wall]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#wall (for 127.0.0.1 at 2010-02-07 09:03:50) [GET]
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;35;1mBrick Load (0.7ms)[0m   [0mSELECT * FROM `bricks` WHERE (`bricks`.user_id = 2) ORDER BY created_at desc LIMIT 8[0m
+Rendering template within layouts/application
+Rendering user/wall
+  [4;36;1mBrick Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `bricks`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM `bricks` WHERE (`bricks`.user_id = 2) [0m
+Rendered user/_brick (3.0ms)
+Rendered user/_brick (0.5ms)
+Rendered user/_brick (2.7ms)
+Rendered user/_brick (0.4ms)
+Rendered user/_brick (0.3ms)
+Completed in 38ms (View: 14, DB: 5) | 200 OK [http://localhost/user/wall]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#wall (for 127.0.0.1 at 2010-02-07 09:04:20) [GET]
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (4.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;35;1mBrick Load (4.7ms)[0m   [0mSELECT * FROM `bricks` WHERE (`bricks`.user_id = 2) ORDER BY created_at desc LIMIT 8[0m
+Rendering template within layouts/application
+Rendering user/wall
+  [4;36;1mBrick Columns (3.8ms)[0m   [0;1mSHOW FIELDS FROM `bricks`[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mSELECT count(*) AS count_all FROM `bricks` WHERE (`bricks`.user_id = 2) [0m
+Rendered user/_brick (9.4ms)
+Rendered user/_brick (0.6ms)
+Rendered user/_brick (0.3ms)
+Rendered user/_brick (0.3ms)
+Rendered user/_brick (0.3ms)
+Completed in 72ms (View: 23, DB: 16) | 200 OK [http://localhost/user/wall]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#wall (for 127.0.0.1 at 2010-02-07 09:05:14) [GET]
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;35;1mBrick Load (0.9ms)[0m   [0mSELECT * FROM `bricks` WHERE (`bricks`.user_id = 2) ORDER BY created_at desc LIMIT 8[0m
+Rendering template within layouts/application
+Rendering user/wall
+  [4;36;1mBrick Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `bricks`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM `bricks` WHERE (`bricks`.user_id = 2) [0m
+Rendered user/_brick (3.0ms)
+Rendered user/_brick (0.8ms)
+Rendered user/_brick (0.4ms)
+Rendered user/_brick (0.3ms)
+Rendered user/_brick (0.3ms)
+Completed in 37ms (View: 12, DB: 5) | 200 OK [http://localhost/user/wall]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#wall (for 127.0.0.1 at 2010-02-07 09:05:16) [GET]
+  [4;35;1mUser Columns (3.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;35;1mBrick Load (1.0ms)[0m   [0mSELECT * FROM `bricks` WHERE (`bricks`.user_id = 2) ORDER BY created_at desc LIMIT 8[0m
+Rendering template within layouts/application
+Rendering user/wall
+  [4;36;1mBrick Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `bricks`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT count(*) AS count_all FROM `bricks` WHERE (`bricks`.user_id = 2) [0m
+Rendered user/_brick (3.1ms)
+Rendered user/_brick (0.5ms)
+Rendered user/_brick (0.4ms)
+Rendered user/_brick (0.3ms)
+Rendered user/_brick (0.3ms)
+Completed in 37ms (View: 13, DB: 7) | 200 OK [http://localhost/user/wall]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#wall (for 127.0.0.1 at 2010-02-07 09:05:32) [GET]
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;35;1mBrick Load (0.7ms)[0m   [0mSELECT * FROM `bricks` WHERE (`bricks`.user_id = 2) ORDER BY created_at desc LIMIT 8[0m
+Rendering template within layouts/application
+Rendering user/wall
+  [4;36;1mBrick Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `bricks`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT count(*) AS count_all FROM `bricks` WHERE (`bricks`.user_id = 2) [0m
+Rendered user/_brick (5.2ms)
+Rendered user/_brick (0.6ms)
+Rendered user/_brick (0.4ms)
+Rendered user/_brick (0.3ms)
+Rendered user/_brick (0.3ms)
+Completed in 38ms (View: 15, DB: 5) | 200 OK [http://localhost/user/wall]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#wall (for 127.0.0.1 at 2010-02-07 09:05:53) [GET]
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;35;1mBrick Load (0.7ms)[0m   [0mSELECT * FROM `bricks` WHERE (`bricks`.user_id = 2) ORDER BY created_at desc LIMIT 8[0m
+Rendering template within layouts/application
+Rendering user/wall
+  [4;36;1mBrick Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `bricks`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM `bricks` WHERE (`bricks`.user_id = 2) [0m
+Rendered user/_brick (3.3ms)
+Rendered user/_brick (0.5ms)
+Rendered user/_brick (0.3ms)
+Rendered user/_brick (0.3ms)
+Rendered user/_brick (0.3ms)
+Completed in 37ms (View: 12, DB: 6) | 200 OK [http://localhost/user/wall]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#wall (for 127.0.0.1 at 2010-02-07 09:05:54) [GET]
+  [4;35;1mUser Columns (3.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;35;1mBrick Load (0.7ms)[0m   [0mSELECT * FROM `bricks` WHERE (`bricks`.user_id = 2) ORDER BY created_at desc LIMIT 8[0m
+Rendering template within layouts/application
+Rendering user/wall
+  [4;36;1mBrick Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `bricks`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM `bricks` WHERE (`bricks`.user_id = 2) [0m
+Rendered user/_brick (3.0ms)
+Rendered user/_brick (0.6ms)
+Rendered user/_brick (0.3ms)
+Rendered user/_brick (0.3ms)
+Rendered user/_brick (0.3ms)
+Completed in 37ms (View: 12, DB: 7) | 200 OK [http://localhost/user/wall]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#wall (for 127.0.0.1 at 2010-02-07 09:06:02) [GET]
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;35;1mBrick Load (0.8ms)[0m   [0mSELECT * FROM `bricks` WHERE (`bricks`.user_id = 2) ORDER BY created_at desc LIMIT 8[0m
+Rendering template within layouts/application
+Rendering user/wall
+  [4;36;1mBrick Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `bricks`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM `bricks` WHERE (`bricks`.user_id = 2) [0m
+Rendered user/_brick (3.3ms)
+Rendered user/_brick (0.5ms)
+Rendered user/_brick (0.4ms)
+Rendered user/_brick (0.4ms)
+Rendered user/_brick (0.4ms)
+Completed in 36ms (View: 12, DB: 5) | 200 OK [http://localhost/user/wall]
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#wall (for 127.0.0.1 at 2010-02-07 09:07:02) [GET]
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;35;1mBrick Load (0.7ms)[0m   [0mSELECT * FROM `bricks` WHERE (`bricks`.user_id = 2) ORDER BY created_at desc LIMIT 8[0m
+Rendering template within layouts/application
+Rendering user/wall
+  [4;36;1mBrick Columns (3.1ms)[0m   [0;1mSHOW FIELDS FROM `bricks`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM `bricks` WHERE (`bricks`.user_id = 2) [0m
+Rendered user/_brick (3.0ms)
+Rendered user/_brick (0.9ms)
+Rendered user/_brick (0.4ms)
+Rendered user/_brick (0.3ms)
+Rendered user/_brick (0.3ms)
+Completed in 36ms (View: 12, DB: 8) | 200 OK [http://localhost/user/wall]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#wall (for 127.0.0.1 at 2010-02-07 09:07:42) [GET]
+  [4;35;1mUser Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;35;1mBrick Load (0.7ms)[0m   [0mSELECT * FROM `bricks` WHERE (`bricks`.user_id = 2) ORDER BY created_at desc LIMIT 8[0m
+Rendering template within layouts/application
+Rendering user/wall
+  [4;36;1mBrick Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `bricks`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM `bricks` WHERE (`bricks`.user_id = 2) [0m
+Rendered user/_brick (3.0ms)
+Rendered user/_brick (0.5ms)
+Rendered user/_brick (0.3ms)
+Rendered user/_brick (0.3ms)
+Rendered user/_brick (0.3ms)
+Completed in 36ms (View: 12, DB: 5) | 200 OK [http://localhost/user/wall]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#newbrick (for 127.0.0.1 at 2010-02-07 09:08:27) [POST]
+  Parameters: {"authenticity_token"=>"SSsWxK5y13sEgA6izefD6NVXywDsfK1aZd8LQfrd18Q=", "brick"=>{"title"=>"co kdyz budu mit tak dlouhy nadpis, ze se to nevejde na radek? uvidime", "text"=>""}, "commit"=>"pov\xC4\x9Bsit na ze\xC4\x8F"}
+  [4;35;1mUser Columns (3.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;35;1mBrick Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `bricks`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+
+ActionView::MissingTemplate (Missing template user/newbrick.erb in view path app/views):
+  <internal:prelude>:8:in `synchronize'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#newbrick (for 127.0.0.1 at 2010-02-07 09:08:53) [POST]
+  Parameters: {"authenticity_token"=>"SSsWxK5y13sEgA6izefD6NVXywDsfK1aZd8LQfrd18Q=", "brick"=>{"title"=>"co kdyz budu mit tak dlouhy nadpis, ze se to nevejde na radek? uvidime", "text"=>"neco"}, "commit"=>"pov\xC4\x9Bsit na ze\xC4\x8F"}
+  [4;35;1mUser Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;35;1mBrick Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `bricks`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mBrick Create (0.6ms)[0m   [0mINSERT INTO `bricks` (`user_id`, `title`, `text`, `created_at`, `updated_at`) VALUES(2, 'co kdyz budu mit tak dlouhy nadpis, ze se to nevejde na radek? uvidime', 'neco', '2010-02-07 08:08:53', '2010-02-07 08:08:53')[0m
+  [4;36;1mSQL (43.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/user/wall
+Completed in 98ms (DB: 62) | 302 Found [http://localhost/user/newbrick]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#wall (for 127.0.0.1 at 2010-02-07 09:08:53) [GET]
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;36;1mBrick Load (0.7ms)[0m   [0;1mSELECT * FROM `bricks` WHERE (`bricks`.user_id = 2) ORDER BY created_at desc LIMIT 8[0m
+Rendering template within layouts/application
+Rendering user/wall
+  [4;35;1mBrick Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `bricks`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM `bricks` WHERE (`bricks`.user_id = 2) [0m
+Rendered user/_brick (3.1ms)
+Rendered user/_brick (0.5ms)
+Rendered user/_brick (0.3ms)
+Rendered user/_brick (0.4ms)
+Rendered user/_brick (0.3ms)
+Rendered user/_brick (0.3ms)
+Completed in 37ms (View: 12, DB: 5) | 200 OK [http://localhost/user/wall]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#wall (for 127.0.0.1 at 2010-02-07 09:09:35) [GET]
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;36;1mBrick Load (1.0ms)[0m   [0;1mSELECT * FROM `bricks` WHERE (`bricks`.user_id = 2) ORDER BY created_at desc LIMIT 8[0m
+Rendering template within layouts/application
+Rendering user/wall
+  [4;35;1mBrick Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `bricks`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM `bricks` WHERE (`bricks`.user_id = 2) [0m
+Rendered user/_brick (5.3ms)
+Rendered user/_brick (0.6ms)
+Rendered user/_brick (0.4ms)
+Rendered user/_brick (0.3ms)
+Rendered user/_brick (0.3ms)
+Rendered user/_brick (0.3ms)
+Completed in 37ms (View: 14, DB: 5) | 200 OK [http://localhost/user/wall]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#wall (for 127.0.0.1 at 2010-02-07 09:10:04) [GET]
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;36;1mBrick Load (1.2ms)[0m   [0;1mSELECT * FROM `bricks` WHERE (`bricks`.user_id = 2) ORDER BY created_at desc LIMIT 8[0m
+Rendering template within layouts/application
+Rendering user/wall
+  [4;35;1mBrick Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `bricks`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM `bricks` WHERE (`bricks`.user_id = 2) [0m
+Rendered user/_brick (5.0ms)
+Rendered user/_brick (0.9ms)
+Rendered user/_brick (0.4ms)
+Rendered user/_brick (0.6ms)
+Rendered user/_brick (0.4ms)
+Rendered user/_brick (0.3ms)
+Completed in 40ms (View: 15, DB: 5) | 200 OK [http://localhost/user/wall]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#wall (for 127.0.0.1 at 2010-02-07 09:10:28) [GET]
+  [4;36;1mUser Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;36;1mBrick Load (0.7ms)[0m   [0;1mSELECT * FROM `bricks` WHERE (`bricks`.user_id = 2) ORDER BY created_at desc LIMIT 8[0m
+Rendering template within layouts/application
+Rendering user/wall
+  [4;35;1mBrick Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `bricks`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM `bricks` WHERE (`bricks`.user_id = 2) [0m
+Rendered user/_brick (3.1ms)
+Rendered user/_brick (0.5ms)
+Rendered user/_brick (0.4ms)
+Rendered user/_brick (0.3ms)
+Rendered user/_brick (0.3ms)
+Rendered user/_brick (0.3ms)
+Completed in 37ms (View: 13, DB: 5) | 200 OK [http://localhost/user/wall]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#wall (for 127.0.0.1 at 2010-02-07 09:10:38) [GET]
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;36;1mBrick Load (0.7ms)[0m   [0;1mSELECT * FROM `bricks` WHERE (`bricks`.user_id = 2) ORDER BY created_at desc LIMIT 8[0m
+Rendering template within layouts/application
+Rendering user/wall
+  [4;35;1mBrick Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `bricks`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM `bricks` WHERE (`bricks`.user_id = 2) [0m
+Rendered user/_brick (3.2ms)
+Rendered user/_brick (0.6ms)
+Rendered user/_brick (0.7ms)
+Rendered user/_brick (0.4ms)
+Rendered user/_brick (0.3ms)
+Rendered user/_brick (0.3ms)
+Completed in 38ms (View: 13, DB: 5) | 200 OK [http://localhost/user/wall]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#newbrick (for 127.0.0.1 at 2010-02-07 09:11:22) [POST]
+  Parameters: {"authenticity_token"=>"SSsWxK5y13sEgA6izefD6NVXywDsfK1aZd8LQfrd18Q=", "brick"=>{"title"=>"7", "text"=>"7"}, "commit"=>"pov\xC4\x9Bsit na ze\xC4\x8F"}
+  [4;36;1mUser Columns (3.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;36;1mBrick Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `bricks`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mBrick Create (10.5ms)[0m   [0;1mINSERT INTO `bricks` (`user_id`, `title`, `text`, `created_at`, `updated_at`) VALUES(2, '7', '7', '2010-02-07 08:11:22', '2010-02-07 08:11:22')[0m
+  [4;35;1mSQL (37.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/user/wall
+Completed in 81ms (DB: 54) | 302 Found [http://localhost/user/newbrick]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#wall (for 127.0.0.1 at 2010-02-07 09:11:22) [GET]
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;35;1mBrick Load (0.7ms)[0m   [0mSELECT * FROM `bricks` WHERE (`bricks`.user_id = 2) ORDER BY created_at desc LIMIT 8[0m
+Rendering template within layouts/application
+Rendering user/wall
+  [4;36;1mBrick Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `bricks`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM `bricks` WHERE (`bricks`.user_id = 2) [0m
+Rendered user/_brick (3.4ms)
+Rendered user/_brick (0.5ms)
+Rendered user/_brick (0.4ms)
+Rendered user/_brick (0.3ms)
+Rendered user/_brick (0.3ms)
+Rendered user/_brick (0.3ms)
+Rendered user/_brick (0.3ms)
+Completed in 37ms (View: 13, DB: 5) | 200 OK [http://localhost/user/wall]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#newbrick (for 127.0.0.1 at 2010-02-07 09:11:32) [POST]
+  Parameters: {"authenticity_token"=>"SSsWxK5y13sEgA6izefD6NVXywDsfK1aZd8LQfrd18Q=", "brick"=>{"title"=>"8", "text"=>"8"}, "commit"=>"pov\xC4\x9Bsit na ze\xC4\x8F"}
+  [4;35;1mUser Columns (4.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (2.7ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;35;1mBrick Columns (3.6ms)[0m   [0mSHOW FIELDS FROM `bricks`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mBrick Create (0.4ms)[0m   [0mINSERT INTO `bricks` (`user_id`, `title`, `text`, `created_at`, `updated_at`) VALUES(2, '8', '8', '2010-02-07 08:11:32', '2010-02-07 08:11:32')[0m
+  [4;36;1mSQL (61.7ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/user/wall
+Completed in 103ms (DB: 73) | 302 Found [http://localhost/user/newbrick]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#wall (for 127.0.0.1 at 2010-02-07 09:11:32) [GET]
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;36;1mBrick Load (0.7ms)[0m   [0;1mSELECT * FROM `bricks` WHERE (`bricks`.user_id = 2) ORDER BY created_at desc LIMIT 8[0m
+Rendering template within layouts/application
+Rendering user/wall
+  [4;35;1mBrick Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `bricks`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM `bricks` WHERE (`bricks`.user_id = 2) [0m
+Rendered user/_brick (3.0ms)
+Rendered user/_brick (0.6ms)
+Rendered user/_brick (0.4ms)
+Rendered user/_brick (0.3ms)
+Rendered user/_brick (0.3ms)
+Rendered user/_brick (0.3ms)
+Rendered user/_brick (0.3ms)
+Rendered user/_brick (0.3ms)
+Completed in 42ms (View: 16, DB: 5) | 200 OK [http://localhost/user/wall]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#newbrick (for 127.0.0.1 at 2010-02-07 09:11:42) [POST]
+  Parameters: {"authenticity_token"=>"SSsWxK5y13sEgA6izefD6NVXywDsfK1aZd8LQfrd18Q=", "brick"=>{"title"=>"9", "text"=>"9"}, "commit"=>"pov\xC4\x9Bsit na ze\xC4\x8F"}
+  [4;36;1mUser Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;36;1mBrick Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `bricks`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mBrick Create (0.4ms)[0m   [0;1mINSERT INTO `bricks` (`user_id`, `title`, `text`, `created_at`, `updated_at`) VALUES(2, '9', '9', '2010-02-07 08:11:42', '2010-02-07 08:11:42')[0m
+  [4;35;1mSQL (36.1ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/user/wall
+Completed in 71ms (DB: 41) | 302 Found [http://localhost/user/newbrick]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#wall (for 127.0.0.1 at 2010-02-07 09:11:43) [GET]
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;35;1mBrick Load (0.9ms)[0m   [0mSELECT * FROM `bricks` WHERE (`bricks`.user_id = 2) ORDER BY created_at desc LIMIT 8[0m
+Rendering template within layouts/application
+Rendering user/wall
+  [4;36;1mBrick Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `bricks`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM `bricks` WHERE (`bricks`.user_id = 2) [0m
+Rendered user/_brick (3.1ms)
+Rendered user/_brick (0.5ms)
+Rendered user/_brick (0.3ms)
+Rendered user/_brick (0.3ms)
+Rendered user/_brick (0.3ms)
+Rendered user/_brick (0.4ms)
+Rendered user/_brick (0.4ms)
+Rendered user/_brick (0.6ms)
+Completed in 44ms (View: 14, DB: 5) | 200 OK [http://localhost/user/wall]
