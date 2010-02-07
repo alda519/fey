@@ -40,23 +40,17 @@
 <div id="lightblue_bar">
 <div id="menu" class="content">
 <% if logged_in? %>
-<%= link_to_if controller.action_name == 'wall', 'wall', {:controller => 'user', :action => 'wall'}, :id => 'active' do 
-  link_to 'wall', :controller => 'user', :action => 'wall' 
-end
-%>
-<%= link_to_if controller.action_name == 'show', 'info', {:controller => 'user', :action => 'show'}, :id => 'active' do
-  link_to 'info', :controller => 'user', :action => 'show' 
-end
-%>
-<%= link_to_if controller.action_name == 'foto', 'foto', {:controller => 'user', :action => 'foto'}, :id => 'active' do
-  link_to 'foto', :controller => 'user', :action => 'foto' 
-end
-%>
+  <%= link_to_if controller.controller_name == 'wall', 'wall', {:controller => 'user', :action => 'wall'}, :id => 'active' do 
+    link_to 'wall', :controller => 'user', :action => 'wall'; end %>
+  <%= link_to_if controller.action_name == 'show', 'info', {:controller => 'user', :action => 'show'}, :id => 'active' do
+    link_to 'info', :controller => 'user', :action => 'show'; end %>
+  <%= link_to_if controller.action_name == 'foto', 'foto', {:controller => 'user', :action => 'foto'}, :id => 'active' do
+    link_to 'foto', :controller => 'user', :action => 'foto'; end %>
 <% else %>
-<%= link_to_if controller.action_name == 'login', 'Přihlásit se', {:controller => 'user', :action => 'foto'}, :id => 'active' do
-  link_to 'Přihlásit se', :controller => 'user', :action => 'login'; end %>
-<%= link_to_if controller.action_name == 'register', 'Zaregistrovat se', {:controller => 'user', :action => 'foto'}, :id => 'active' do
-  link_to 'Zaregistrovat se', :controller => 'user', :action => 'register'; end %>
+  <%= link_to_if controller.action_name == 'login', 'Přihlásit se', {:controller => 'user', :action => 'login'}, :id => 'active' do
+    link_to 'Přihlásit se', :controller => 'user', :action => 'login'; end %>
+  <%= link_to_if controller.action_name == 'register', 'Zaregistrovat se', {:controller => 'user', :action => 'register'}, :id => 'active' do
+    link_to 'Zaregistrovat se', :controller => 'user', :action => 'register'; end %>
 <% end %>
 </div>
 </div>

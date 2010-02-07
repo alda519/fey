@@ -18,6 +18,10 @@ h2 {
   bottom: 15px;
 }
 
+.fieldWithErrors {
+  border: 2px solid #f00;
+}
+
 
 
 #blue_bar {
@@ -110,6 +114,7 @@ h2 {
 
 #form table {
   margin: auto;
+  text-align: left;
 }
 
 
@@ -147,10 +152,20 @@ h2 {
   padding-left: 10px;
 }
 
-.date {
+.controll {
+  padding-right: 5px;
   font-size: 70%;
   color: #666;
   text-align: right;
+}
+
+.controll a {
+  text-decoration: none;
+  color: #00f;
+}
+
+.controll a:hover {
+  text-decoration: underline;
 }
 
 
@@ -170,3 +185,6 @@ h2 {
 #cow {
   text-align: center;
 }
+
+
+
