@@ -1,14 +1,17 @@
 <div class="board">
 <h3><%= @current_user.name %></h3>
+<%= image_tag 'cow_small.png' %>
 
-<p>...</p>
+<h3>Vaši nepřátelé</h3>
+<div id="enemies">
+<%= render :partial => 'enemy', :collection => @enemies %>
+</div>
 
-<p>...</p>
-
+<h3>co já vím, co dalšího</h3>
 </div>
 
 <div class="wall">
-<%= link_to 'nový', :action => 'newbrick' %>
+<p><%= link_to 'počmárat svou zeď', :action => 'newbrick' %></p>
 
 <% if @current_user.bricks.size > 0 %>
   <%= render :partial => 'brick', :collection => @latest_bricks %>
@@ -16,5 +19,3 @@
   Na zdi nemáš žádné čmáranice.
 <% end %>
 </div>
-
-
