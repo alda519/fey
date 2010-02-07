@@ -9,7 +9,7 @@
 
 <div class="wall">
 <% if @current_user.bricks.size > 0 %>
-  <%= render :partial => 'brick', :collection => @current_user.bricks %>
+  <%= render :partial => 'brick', :collection => @latest_bricks %>
 <% else %>
   Na zdi nemáš žádné čmáranice.
 <% end %>

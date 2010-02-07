@@ -26,6 +26,7 @@ class UserController < ApplicationController
   end
 
   def show
+    @latest_brick = @current_user.bricks.find :last
   end
 
   def register
@@ -37,6 +38,7 @@ class UserController < ApplicationController
   end
 
   def wall
+    @latest_bricks = @current_user.bricks.find :all, :order => 'created_at desc', :limit => 8
   end
 
   def foto

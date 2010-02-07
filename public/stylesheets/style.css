@@ -129,19 +129,30 @@ h2 {
   border: 2px solid #babaff;
   margin: 2px;
   margin-bottom: 5px;
-  padding-bottom: 5px;
+/*  padding-bottom: 5px; */
   overflow: auto;
+  position: relative;
 }
 
 .brick img {
   float: left;
-  margin-right: 5px;
+  margin-right: 10px;
+/*  border-right: 2px solid #babaff; */
+/*  border-bottom: 2px solid #babaff; */
 }
 
 .brick h3 {
-  background-color: #ececff;
+  background-color:#babaff/* #ececff*/;
   margin-top: 0px;
+  margin-bottom: 5px;
 }
+
+.date {
+  font-size: 70%;
+  color: #666;
+  text-align: right;
+}
+
 
 
 .board {
@@ -157,6 +168,5 @@ h2 {
 
 
 #cow {
-  margin: auto;
   text-align: center;
 }
