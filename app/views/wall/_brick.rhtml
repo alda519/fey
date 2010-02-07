@@ -1,0 +1,12 @@
+<div class="brick">
+<%= image_tag 'cow_small.png' %>
+<h3><%= brick.title %></h3>
+<%= brick.text %>
+<br clear="all" />
+<div class="controll">
+<%= link_to_if false, 'upravit', :controller => 'wall', :action => 'edit', :id => brick.id %> | 
+<%= link_to 'smazat', :controller => 'wall', :action => 'delete', :id => brick.id %>
+<br />
+<%= brick.created_at.to_formatted_s %>
+</div>
+</div>
