@@ -2,12 +2,12 @@
 <%= image_tag 'cow.png' %>
 </div>
 
-<h3><%= @current_user.name %></h3>
+<h3><%= h @current_user.name %></h3>
 
-<p>mail: <%= mail_to @current_user.email %></p>
+<p>mail: <%= mail_to h(@current_user.email) %></p>
 <p>web:
-<%= link_to_if(@current_user.web =~ /^http:\/\//,  @current_user.web, @current_user.web) do
-  link_to @current_user.web, "http://" + @current_user.web
+<%= link_to_if(@current_user.web =~ /^http:\/\//, h(@current_user.web), @current_user.web) do
+  link_to h(@current_user.web), "http://" + @current_user.web
 end
 %>
 </p>
