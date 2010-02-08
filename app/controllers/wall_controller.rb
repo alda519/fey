@@ -31,7 +31,8 @@ class WallController < ApplicationController
       Brick.update params[:id], params[:brick]
       redirect_to :action => 'index'
     else
-      @brick = Brick.find_by_id params[:id]
+      @brick = Brick.find_by_id_and_user_id params[:id], @current_user.id
+      redirect_to :action => 'index' if @brick.blank?
     end
   end
 
