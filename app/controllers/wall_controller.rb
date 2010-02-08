@@ -17,13 +17,13 @@ class WallController < ApplicationController
   end
 
   def delete
-    @brick = Brick.find_by_id params[:id]
-    if @brick.user_id == @current_user.id
+    @brick = Brick.find_by_id_and_user_id params[:id], @current_user.id
+    unless @brick.blank?
       @brick.delete
     else
       flash[:warning] = 'Tento nejde smazat'
     end
-      redirect_to :controller => session[:page]
+    redirect_to :controller => session[:page]
   end
 
   def edit
