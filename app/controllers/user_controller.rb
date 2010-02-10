@@ -1,3 +1,5 @@
+require 'RMagick'
+
 class UserController < ApplicationController
 
   before_filter :login_required, :only => [:show, :logout, :wall, :avatar, :newavatar, :foto, :edit]
@@ -66,12 +68,12 @@ class UserController < ApplicationController
       directory = "#{RAILS_ROOT}/lib"
       path = File.join(directory, name)
       File.open(path, "wb") { |f| f.write(params[:upload][:datafile].read) }
-      #flash[:notice] = `convert #{directory}/#{name} -verbose -resize 80x80 #{directory}/avatar-#{@current_user.id}.png 2>&1`
-      render :text => "convert #{directory}/#{name} -resize 80x80 #{directory}/avatar-#{@current_user.id}.png"
+      #`convert #{directory}/#{name} -verbose -resize 80x80 #{directory}/avatar-#{@current_user.id}.png 2>&1`
+      #render :text => "convert #{directory}/#{name} -resize 80x80 #{directory}/avatar-#{@current_user.id}.png"
       #`rm #{directory}/#{name}` 
-       #redirect_to :action => 'show'
-    #  render :text => flash[:notice]
-#      send_data params[:upload][:datafile].read, :disposition => 'inline'
+      img_orig = Magick::Image.read("#{RAILS_ROOT}/lib/tmp-#{@current_user.id}").first
+      img_orig.resize_to_fit(80,80).write "#{RAILS_ROOT}/lib/avatar-#{@current_user.id}.png"
+      redirect_to :action => 'show'
     end
   end
 
