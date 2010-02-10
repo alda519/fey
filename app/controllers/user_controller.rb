@@ -62,11 +62,11 @@ class UserController < ApplicationController
   def newavatar
     if request.post? and ! params[:upload][:datafile].blank?
       name = params[:upload][:datafile].original_filename
-      directory = "lib/tmp"
+      directory = "#{RAILS_ROOT}/lib/tmp"
       path = File.join(directory, name)
       File.open(path, "wb") { |f| f.write(params[:upload][:datafile].read) }
-      `convert lib/tmp/#{name} -resize 80x80 lib/avatar-#{@current_user.id}.png`
-      `rm lib/tmp/#{name}` 
+      `convert #{RAILS_ROOT}/lib/tmp/#{name} -resize 80x80 #{RAILS_ROOT}/lib/avatar-#{@current_user.id}.png`
+      `rm #{RAILS_ROOT}/lib/tmp/#{name}` 
        redirect_to :action => 'show'
 #      send_data params[:upload][:datafile].read, :disposition => 'inline'
     end
