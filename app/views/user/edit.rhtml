@@ -1,0 +1,28 @@
+<div id="form">
+<h3>Úprava údajů</h3>
+<% form_for :user do |f| %>
+<table>
+<tr><td>Login</td><td><%= f.text_field :login %></td></tr>
+<tr><td><%= "Jméno"%></td><td><%= f.text_field :name %></td></tr>
+<tr><td>Email</td><td><%= f.text_field :email %></td></tr>
+<tr><td>Web</td><td><%= f.text_field :web %></td></tr>
+<tr><td colspan="2"><%= submit_tag 'upravit údaje' %></td></tr>
+</table>
+<% end %>
+
+<h3>Změna hesla</h3>
+<% form_for :user do |f| %>
+<table>
+<tr><td>Heslo</td><td><%= f.password_field :password %></td></tr>
+<tr><td colspan="2"><%= submit_tag 'změnit heslo' %></td></tr>
+</table>
+<% end %>
+
+<h3>Změna avataru</h3>
+<% form_for :user, :url => {:action => 'newavatar'}, :html => {:multipart => true} do |f| %>
+<table>
+<tr><td>Avatar</td><td><%= file_field 'upload', 'datafile' %></td></tr>
+<tr><td colspan="2"><%= submit_tag 'změnit avatar' %></td></tr>
+</table>
+<% end %>
+</div>

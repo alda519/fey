@@ -1,6 +1,6 @@
 class UserController < ApplicationController
 
-  before_filter :login_required, :only => [:show, :logout, :wall, :foto]
+  before_filter :login_required, :only => [:show, :logout, :wall, :avatar, :newavatar, :foto, :edit]
 
   def index
     redirect_to :action => 'show'
@@ -44,6 +44,46 @@ class UserController < ApplicationController
   end
 
   def foto
+  end
+
+  def avatar
+    if params[:id].blank?
+      num = @current_user.id
+    else
+      num = params[:id]
+    end
+    if FileTest.exists?("#{RAILS_ROOT}/lib/avatar-#{num}.png")
+      send_file "#{RAILS_ROOT}/lib/avatar-#{num}.png", :type=>'image/png', :disposition=>'inline'
+    else
+      send_file "#{RAILS_ROOT}/public/images/cow_small.png", :type => 'image/png', :disposition => 'inline'
+    end
+  end
+
+  def newavatar
+    if request.post? and ! params[:upload][:datafile].blank?
+      name = params[:upload][:datafile].original_filename
+      directory = "lib/tmp"
+      path = File.join(directory, name)
+      File.open(path, "wb") { |f| f.write(params[:upload][:datafile].read) }
+      `convert lib/tmp/#{name} -resize 80x80 lib/avatar-#{@current_user.id}.png`
+      `rm lib/tmp/#{name}` 
+       redirect_to :action => 'show'
+#      send_data params[:upload][:datafile].read, :disposition => 'inline'
+    end
+  end
+
+  def edit
+    @user = User.find_by_id @current_user.id
+    if request.post?
+      @user.attributes = params[:user]
+      if @user.save
+        redirect_to :action => 'index'
+      else
+        @user = User.new params[:user]
+      end
+    else
+      @user.password = ''
+    end
   end
 
 end

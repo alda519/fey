@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   has_many :bricks
 
   before_create :hash_password
+  before_update :hash_password
   
   private
   def hash_password

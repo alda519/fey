@@ -27,11 +27,15 @@ class WallController < ApplicationController
   end
 
   def edit
+    @brick = Brick.find_by_id_and_user_id params[:id], @current_user.id
     if request.post?
-      Brick.update params[:id], params[:brick]
-      redirect_to :action => 'index'
+      @brick.attributes= params[:brick]
+      if @brick.save
+         redirect_to :action => 'index'
+      else
+        @brick = Brick.new params[:brick]
+      end
     else
-      @brick = Brick.find_by_id_and_user_id params[:id], @current_user.id
       redirect_to :action => 'index' if @brick.blank?
     end
   end
