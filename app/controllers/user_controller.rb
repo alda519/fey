@@ -64,11 +64,11 @@ class UserController < ApplicationController
       name = params[:upload][:datafile].original_filename
       directory = "lib/tmp"
       path = File.join(directory, name)
-#      File.open(path, "wb") { |f| f.write(params[:upload][:datafile].read) }
-#      `convert lib/tmp/#{name} -resize 80x80 lib/avatar-#{@current_user.id}.png`
-#      `rm lib/tmp/#{name}` 
-#       redirect_to :action => 'show'
-      send_data params[:upload][:datafile].read, :disposition => 'inline'
+      File.open(path, "wb") { |f| f.write(params[:upload][:datafile].read) }
+      `convert lib/tmp/#{name} -resize 80x80 lib/avatar-#{@current_user.id}.png`
+      `rm lib/tmp/#{name}` 
+       redirect_to :action => 'show'
+#      send_data params[:upload][:datafile].read, :disposition => 'inline'
     end
   end
 
