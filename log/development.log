@@ -46672,3 +46672,343 @@ Processing UserController#avatar (for 127.0.0.1 at 2010-02-10 16:17:53) [GET]
   [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
 Completed in 17ms (View: 1, DB: 2) | 200 OK [http://localhost/user/avatar/]
 Streaming file /home/alda/rails/feysbook/lib/avatar-3.png
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#logout (for 127.0.0.1 at 2010-02-10 16:46:05) [GET]
+  Parameters: {"controller"=>"user", "action"=>"logout"}
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/logout
+Completed in 21ms (View: 6, DB: 3) | 200 OK [http://localhost/user/logout]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2010-02-10 16:46:09) [POST]
+  Parameters: {"authenticity_token"=>"SSsWxK5y13sEgA6izefD6NVXywDsfK1aZd8LQfrd18Q=", "login"=>"koo", "password"=>"[FILTERED]", "commit"=>"log in", "controller"=>"user", "action"=>"login"}
+  [4;36;1mUser Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'koo' AND `users`.`password` = '956154322bd4b43a2af03dca7a245c1a5eb83b39') LIMIT 1[0m
+Redirected to http://localhost:3000/user/show
+Completed in 14ms (DB: 3) | 302 Found [http://localhost/user/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show (for 127.0.0.1 at 2010-02-10 16:46:09) [GET]
+  Parameters: {"controller"=>"user", "action"=>"show"}
+  [4;35;1mUser Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 7) LIMIT 1[0m
+  [4;35;1mBrick Load (0.6ms)[0m   [0mSELECT * FROM `bricks` WHERE (`bricks`.user_id = 7) ORDER BY bricks.id DESC LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/show
+  [4;36;1mBrick Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `bricks`[0m
+Rendered wall/_brick (2.1ms)
+Completed in 35ms (View: 12, DB: 4) | 200 OK [http://localhost/user/show]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#avatar (for 127.0.0.1 at 2010-02-10 16:46:10) [GET]
+  Parameters: {"controller"=>"user", "action"=>"avatar"}
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 7) LIMIT 1[0m
+Completed in 25ms (View: 1, DB: 2) | 200 OK [http://localhost/user/avatar/]
+Streaming file /home/alda/rails/feysbook/lib/avatar-7.png
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#edit (for 127.0.0.1 at 2010-02-10 16:46:11) [GET]
+  Parameters: {"controller"=>"user", "action"=>"edit"}
+  [4;35;1mUser Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 7) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 7) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/edit
+Completed in 26ms (View: 9, DB: 3) | 200 OK [http://localhost/user/edit]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#newavatar (for 127.0.0.1 at 2010-02-10 16:46:18) [POST]
+  Parameters: {"authenticity_token"=>"SSsWxK5y13sEgA6izefD6NVXywDsfK1aZd8LQfrd18Q=", "upload"=>{"datafile"=>#<File:/tmp/RackMultipart20100210-4627-1wpgrob-0>}, "commit"=>"zm\xC4\x9Bnit avatar", "controller"=>"user", "action"=>"newavatar"}
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 7) LIMIT 1[0m
+Redirected to http://localhost:3000/user/show
+Completed in 113ms (DB: 2) | 302 Found [http://localhost/user/newavatar]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show (for 127.0.0.1 at 2010-02-10 16:46:18) [GET]
+  Parameters: {"controller"=>"user", "action"=>"show"}
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 7) LIMIT 1[0m
+  [4;36;1mBrick Load (0.6ms)[0m   [0;1mSELECT * FROM `bricks` WHERE (`bricks`.user_id = 7) ORDER BY bricks.id DESC LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/show
+  [4;35;1mBrick Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `bricks`[0m
+Rendered wall/_brick (1.9ms)
+Completed in 35ms (View: 10, DB: 5) | 200 OK [http://localhost/user/show]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#avatar (for 127.0.0.1 at 2010-02-10 16:46:18) [GET]
+  Parameters: {"controller"=>"user", "action"=>"avatar"}
+  [4;35;1mUser Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 7) LIMIT 1[0m
+Completed in 22ms (View: 1, DB: 3) | 200 OK [http://localhost/user/avatar/]
+Streaming file /home/alda/rails/feysbook/lib/avatar-7.png
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#wall (for 127.0.0.1 at 2010-02-10 16:46:19) [GET]
+  Parameters: {"controller"=>"user", "action"=>"wall"}
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 7) LIMIT 1[0m
+Redirected to http://localhost:3000/wall
+Completed in 117ms (DB: 2) | 302 Found [http://localhost/user/wall]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WallController#index (for 127.0.0.1 at 2010-02-10 16:46:20) [GET]
+  Parameters: {"controller"=>"wall", "action"=>"index"}
+  [4;35;1mUser Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 7) LIMIT 1[0m
+  [4;35;1mBrick Load (0.7ms)[0m   [0mSELECT * FROM `bricks` WHERE (`bricks`.user_id = 7) ORDER BY created_at desc LIMIT 8[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM `users` WHERE (id != 7) ORDER BY rand() LIMIT 8[0m
+Rendering template within layouts/application
+Rendering wall/index
+Rendered wall/_enemy (0.4ms)
+Rendered wall/_enemy (0.3ms)
+  [4;35;1mBrick Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `bricks`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM `bricks` WHERE (`bricks`.user_id = 7) [0m
+Rendered wall/_brick (4.0ms)
+Completed in 55ms (View: 27, DB: 7) | 200 OK [http://localhost/wall]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#avatar (for 127.0.0.1 at 2010-02-10 16:46:20) [GET]
+  Parameters: {"controller"=>"user", "action"=>"avatar"}
+  [4;36;1mUser Columns (4.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (4.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 7) LIMIT 1[0m
+Completed in 33ms (View: 1, DB: 8) | 200 OK [http://localhost/user/avatar]
+Streaming file /home/alda/rails/feysbook/lib/avatar-7.png
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#avatar (for 127.0.0.1 at 2010-02-10 16:46:20) [GET]
+  Parameters: {"controller"=>"user", "action"=>"avatar", "id"=>"2"}
+  [4;35;1mUser Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 7) LIMIT 1[0m
+Completed in 22ms (View: 2, DB: 2) | 200 OK [http://localhost/user/avatar/2]
+Streaming file /home/alda/rails/feysbook/lib/avatar-2.png
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#avatar (for 127.0.0.1 at 2010-02-10 16:46:20) [GET]
+  Parameters: {"controller"=>"user", "action"=>"avatar", "id"=>"3"}
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 7) LIMIT 1[0m
+Completed in 17ms (View: 1, DB: 2) | 200 OK [http://localhost/user/avatar/3]
+Streaming file /home/alda/rails/feysbook/lib/avatar-3.png
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#avatar (for 127.0.0.1 at 2010-02-10 16:46:20) [GET]
+  Parameters: {"controller"=>"user", "action"=>"avatar"}
+  [4;35;1mUser Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 7) LIMIT 1[0m
+Completed in 17ms (View: 1, DB: 2) | 200 OK [http://localhost/user/avatar/]
+Streaming file /home/alda/rails/feysbook/lib/avatar-7.png
+  [4;36;1mSQL (66.4ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WallController#index (for 127.0.0.1 at 2010-02-10 19:35:08) [GET]
+  Parameters: {"controller"=>"wall", "action"=>"index"}
+  [4;35;1mUser Columns (134.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (35.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 7) LIMIT 1[0m
+  [4;35;1mBrick Load (29.0ms)[0m   [0mSELECT * FROM `bricks` WHERE (`bricks`.user_id = 7) ORDER BY created_at desc LIMIT 8[0m
+  [4;36;1mUser Load (2.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (id != 7) ORDER BY rand() LIMIT 8[0m
+Rendering template within layouts/application
+Rendering wall/index
+Rendered wall/_enemy (18.4ms)
+Rendered wall/_enemy (0.4ms)
+  [4;35;1mBrick Columns (4.7ms)[0m   [0mSHOW FIELDS FROM `bricks`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM `bricks` WHERE (`bricks`.user_id = 7) [0m
+Rendered wall/_brick (390.1ms)
+Completed in 1000ms (View: 550, DB: 273) | 200 OK [http://localhost/wall]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#avatar (for 127.0.0.1 at 2010-02-10 19:35:09) [GET]
+  Parameters: {"controller"=>"user", "action"=>"avatar"}
+  [4;36;1mUser Columns (23.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 7) LIMIT 1[0m
+Completed in 49ms (View: 2, DB: 24) | 200 OK [http://localhost/user/avatar]
+Streaming file /home/alda/rails/feysbook/lib/avatar-7.png
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#avatar (for 127.0.0.1 at 2010-02-10 19:35:09) [GET]
+  Parameters: {"controller"=>"user", "action"=>"avatar"}
+  [4;35;1mUser Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 7) LIMIT 1[0m
+Completed in 22ms (View: 1, DB: 2) | 200 OK [http://localhost/user/avatar/]
+Streaming file /home/alda/rails/feysbook/lib/avatar-7.png
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#avatar (for 127.0.0.1 at 2010-02-10 19:35:09) [GET]
+  Parameters: {"controller"=>"user", "action"=>"avatar", "id"=>"2"}
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 7) LIMIT 1[0m
+Completed in 22ms (View: 6, DB: 2) | 200 OK [http://localhost/user/avatar/2]
+Streaming file /home/alda/rails/feysbook/lib/avatar-2.png
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#avatar (for 127.0.0.1 at 2010-02-10 19:35:09) [GET]
+  Parameters: {"controller"=>"user", "action"=>"avatar", "id"=>"3"}
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 7) LIMIT 1[0m
+Completed in 21ms (View: 1, DB: 3) | 200 OK [http://localhost/user/avatar/3]
+Streaming file /home/alda/rails/feysbook/lib/avatar-3.png
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show (for 127.0.0.1 at 2010-02-10 19:35:10) [GET]
+  Parameters: {"controller"=>"user", "action"=>"show"}
+  [4;36;1mUser Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 7) LIMIT 1[0m
+  [4;36;1mBrick Load (0.7ms)[0m   [0;1mSELECT * FROM `bricks` WHERE (`bricks`.user_id = 7) ORDER BY bricks.id DESC LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/show
+  [4;35;1mBrick Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `bricks`[0m
+Rendered wall/_brick (2.1ms)
+
+ActionView::TemplateError (undefined local variable or method `flas' for #<ActionView::Base:0x980cf68>) on line #22 of app/views/user/show.rhtml:
+19: <% end %>
+20: 
+21: <% unless flash[:notice].blank? %>
+22:   <%= flas[:notice] %>
+23: <% end %>
+
+    app/views/user/show.rhtml:22:in `_run_rhtml_app47views47user47show46rhtml'
+    <internal:prelude>:8:in `synchronize'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /usr/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /usr/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (195.5ms)
+Rendered rescues/_request_and_response (2.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show (for 127.0.0.1 at 2010-02-10 19:35:27) [GET]
+  Parameters: {"controller"=>"user", "action"=>"show"}
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 7) LIMIT 1[0m
+  [4;35;1mBrick Load (0.5ms)[0m   [0mSELECT * FROM `bricks` WHERE (`bricks`.user_id = 7) ORDER BY bricks.id DESC LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/show
+  [4;36;1mBrick Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `bricks`[0m
+Rendered wall/_brick (1.9ms)
+Completed in 54ms (View: 28, DB: 4) | 200 OK [http://localhost/user/show]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#avatar (for 127.0.0.1 at 2010-02-10 19:35:27) [GET]
+  Parameters: {"controller"=>"user", "action"=>"avatar"}
+  [4;36;1mUser Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 7) LIMIT 1[0m
+Completed in 55ms (View: 5, DB: 3) | 200 OK [http://localhost/user/avatar/]
+Streaming file /home/alda/rails/feysbook/lib/avatar-7.png
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#edit (for 127.0.0.1 at 2010-02-10 19:35:30) [GET]
+  Parameters: {"controller"=>"user", "action"=>"edit"}
+  [4;35;1mUser Columns (3.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (2.9ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 7) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 7) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/edit
+Completed in 95ms (View: 62, DB: 7) | 200 OK [http://localhost/user/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#newavatar (for 127.0.0.1 at 2010-02-10 19:35:44) [POST]
+  Parameters: {"authenticity_token"=>"SSsWxK5y13sEgA6izefD6NVXywDsfK1aZd8LQfrd18Q=", "upload"=>{"datafile"=>#<File:/tmp/RackMultipart20100210-4695-1by6ueo-0>}, "commit"=>"zm\xC4\x9Bnit avatar", "controller"=>"user", "action"=>"newavatar"}
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 7) LIMIT 1[0m
+Redirected to http://localhost:3000/user/show
+Completed in 305ms (DB: 2) | 302 Found [http://localhost/user/newavatar]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show (for 127.0.0.1 at 2010-02-10 19:35:44) [GET]
+  Parameters: {"controller"=>"user", "action"=>"show"}
+  [4;36;1mUser Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 7) LIMIT 1[0m
+  [4;36;1mBrick Load (0.6ms)[0m   [0;1mSELECT * FROM `bricks` WHERE (`bricks`.user_id = 7) ORDER BY bricks.id DESC LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/show
+  [4;35;1mBrick Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `bricks`[0m
+Rendered wall/_brick (2.2ms)
+Completed in 39ms (View: 11, DB: 5) | 200 OK [http://localhost/user/show]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#avatar (for 127.0.0.1 at 2010-02-10 19:35:44) [GET]
+  Parameters: {"controller"=>"user", "action"=>"avatar"}
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 7) LIMIT 1[0m
+Completed in 22ms (View: 1, DB: 2) | 200 OK [http://localhost/user/avatar/]
+Streaming file /home/alda/rails/feysbook/lib/avatar-7.png
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show (for 127.0.0.1 at 2010-02-10 19:37:01) [GET]
+  Parameters: {"controller"=>"user", "action"=>"show"}
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 7) LIMIT 1[0m
+  [4;36;1mBrick Load (0.6ms)[0m   [0;1mSELECT * FROM `bricks` WHERE (`bricks`.user_id = 7) ORDER BY bricks.id DESC LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/show
+  [4;35;1mBrick Columns (3.4ms)[0m   [0mSHOW FIELDS FROM `bricks`[0m
+Rendered wall/_brick (1.8ms)
+Completed in 35ms (View: 10, DB: 6) | 200 OK [http://localhost/user/show]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#avatar (for 127.0.0.1 at 2010-02-10 19:37:01) [GET]
+  Parameters: {"controller"=>"user", "action"=>"avatar"}
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 7) LIMIT 1[0m
+Completed in 24ms (View: 1, DB: 2) | 200 OK [http://localhost/user/avatar/]
+Streaming file /home/alda/rails/feysbook/lib/avatar-7.png
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#edit (for 127.0.0.1 at 2010-02-10 19:37:02) [GET]
+  Parameters: {"controller"=>"user", "action"=>"edit"}
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 7) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 7) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user/edit
+Completed in 27ms (View: 9, DB: 2) | 200 OK [http://localhost/user/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#newavatar (for 127.0.0.1 at 2010-02-10 19:37:08) [POST]
+  Parameters: {"authenticity_token"=>"SSsWxK5y13sEgA6izefD6NVXywDsfK1aZd8LQfrd18Q=", "upload"=>{"datafile"=>#<File:/tmp/RackMultipart20100210-4695-a4zhk9-0>}, "commit"=>"zm\xC4\x9Bnit avatar", "controller"=>"user", "action"=>"newavatar"}
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 7) LIMIT 1[0m
+Completed in 346ms (View: 1, DB: 2) | 200 OK [http://localhost/user/newavatar]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#newavatar (for 127.0.0.1 at 2010-02-10 19:37:24) [POST]
+  Parameters: {"authenticity_token"=>"SSsWxK5y13sEgA6izefD6NVXywDsfK1aZd8LQfrd18Q=", "upload"=>{"datafile"=>#<File:/tmp/RackMultipart20100210-4695-15q3gik-0>}, "commit"=>"zm\xC4\x9Bnit avatar", "controller"=>"user", "action"=>"newavatar"}
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 7) LIMIT 1[0m
+Completed in 491ms (View: 1, DB: 3) | 200 OK [http://localhost/user/newavatar]

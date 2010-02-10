@@ -66,9 +66,10 @@ class UserController < ApplicationController
       directory = "#{RAILS_ROOT}/lib"
       path = File.join(directory, name)
       File.open(path, "wb") { |f| f.write(params[:upload][:datafile].read) }
-      `convert #{directory}/#{name} -resize 80x80 #{directory}/avatar-#{@current_user.id}.png`
+      flash[:notice] = `convert #{directory}/#{name} -verbose -resize 80x80 #{directory}/avatar-#{@current_user.id}.png 2>&1`
       #`rm #{directory}/#{name}` 
-       redirect_to :action => 'show'
+       #redirect_to :action => 'show'
+       render :text => flash[:notice]
 #      send_data params[:upload][:datafile].read, :disposition => 'inline'
     end
   end
