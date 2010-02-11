@@ -63,16 +63,14 @@ class UserController < ApplicationController
 
   def newavatar
     if request.post? and ! params[:upload][:datafile].blank?
-#      name = params[:upload][:datafile].original_filename
-      name = "tmp-#{@current_user.id}"
-      directory = "#{RAILS_ROOT}/lib"
-      path = File.join(directory, name)
+      name = "tmp-#{@current_user.id}" ; directory = "#{RAILS_ROOT}/lib" ; path = File.join(directory, name)
       File.open(path, "wb") { |f| f.write(params[:upload][:datafile].read) }
-      #`convert #{directory}/#{name} -verbose -resize 80x80 #{directory}/avatar-#{@current_user.id}.png 2>&1`
-      #render :text => "convert #{directory}/#{name} -resize 80x80 #{directory}/avatar-#{@current_user.id}.png"
-      #`rm #{directory}/#{name}` 
-      img_orig = Magick::Image.read("#{RAILS_ROOT}/lib/tmp-#{@current_user.id}").first
-      img_orig.resize_to_fit(80,80).write "#{RAILS_ROOT}/lib/avatar-#{@current_user.id}.png"
+      begin
+        img_orig = Magick::Image.read(path).first
+        img_orig.resize_to_fill(80,80).write "#{directory}/avatar-#{@current_user.id}.png"
+      rescue
+      end
+      File.delete(path)
       redirect_to :action => 'show'
     end
   end
