@@ -17,7 +17,6 @@ class UserController < ApplicationController
         redirect_to :action => 'show'
         flash[:notice] = 'logged in'
       end
-      # flash[:notice] = 'POST'
     else
       flash[:notice] = '!post'
     end
@@ -76,7 +75,7 @@ class UserController < ApplicationController
   end
 
   def edit
-    @user = User.find_by_id @current_user.id
+    @user = @current_user
     if request.post?
       @user.attributes = params[:user]
       if @user.save

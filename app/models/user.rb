@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
 
-  validates_presence_of :login, :password, :name, :email
+  validates_presence_of :login, :name, :password
   validates_uniqueness_of :login
 
   belongs_to :group
@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   has_many :bricks
 
   before_create :hash_password
-  before_update :hash_password
+  before_update :hash_password , :if => :password_changed?
   
   private
   def hash_password

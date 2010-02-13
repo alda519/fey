@@ -3,9 +3,16 @@ class WallController < ApplicationController
   before_filter :login_required
 
   def index
-    @latest_bricks = @current_user.bricks.find :all, :order => 'created_at desc', :limit => 8
-    session[:page] = 'wall'
+    if params[:id].blank? or params[:id].to_i < 1
+      @current_page = 1
+    else
+      @current_page = params[:id].to_i
+    end
+
+    @latest_bricks = @current_user.bricks.find :all, :order => 'created_at desc', :limit => "#{(@current_page - 1) * 8}, 8"
+    @pages = (@current_user.bricks_count / 8.0).ceil
     @enemies = User.find :all, :order => 'rand()', :conditions => "id != #{@current_user.id}", :limit => 8
+    session[:page] = 'wall'
   end
 
   def newbrick
@@ -17,9 +24,10 @@ class WallController < ApplicationController
   end
 
   def delete
-    @brick = Brick.find_by_id_and_user_id params[:id], @current_user.id
+    #@brick = Brick.find_by_id_and_user_id params[:id], @current_user.id
+    @brick = @current_user.bricks.find_by_id params[:id]
     unless @brick.blank?
-      @brick.delete
+      @brick.destroy #delete
     else
       flash[:warning] = 'Tento nejde smazat'
     end

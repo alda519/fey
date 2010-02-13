@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100206102437) do
+ActiveRecord::Schema.define(:version => 20100212211625) do
 
   create_table "bricks", :force => true do |t|
     t.integer  "user_id"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(:version => 20100206102437) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "password"
+    t.integer  "bricks_count", :default => 0
   end
 
 end

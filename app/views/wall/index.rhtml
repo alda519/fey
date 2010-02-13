@@ -14,9 +14,12 @@
 <div class="wall">
 <p><%= link_to 'počmárat svou zeď', :action => 'newbrick' %></p>
 
-<% if @current_user.bricks.size > 0 %>
+<% if @latest_bricks.size > 0 %>
+  <%= wall_navigation %>
   <%= render :partial => 'brick', :collection => @latest_bricks %>
+  <%= wall_navigation %>
 <% else %>
   Na zdi nemáš žádné čmáranice.
 <% end %>
+
 </div>
