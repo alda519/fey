@@ -138,26 +138,32 @@ h2 {
 
 
 .brick {
-  background-color: #fcfcff;
+  background-color: #f0f0ff;
   border: 2px solid #babaff;
   margin: 2px;
   margin-bottom: 5px;
 /*  padding-bottom: 5px; */
   overflow: auto;
   position: relative;
-  padding-left: 10px;
+/*  padding-left: 10px; */
 }
 
 .brick img {
-  float: left;
+/*  float: left;
   margin-right: 10px;
-  margin-top: 10px;
+  margin-top: 10px; */
+}
+
+.brickcontent {
+  margin: 0px 10px 0px 10px;
+  font-size: 95%;
 }
 
 .brick h3 {
   background-color:#babaff;
-  margin: 0px 0px 5px 90px;
-  padding-left: 10px;
+  margin: 0px 0px 5px 0px;
+/*  margin: 0px 0px 5px 90px;
+  padding-left: 10px; */
 }
 
 .controll {

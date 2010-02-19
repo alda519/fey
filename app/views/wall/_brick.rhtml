@@ -1,8 +1,7 @@
 <div class="brick">
-<%= image_tag '/user/avatar/' %>
+<% image_tag '/user/avatar/' %>
 <h3><%= h brick.title %></h3>
-<%= (h brick.text).gsub "\n", "<br />" %>
-<br clear="all" />
+<div class="brickcontent"><%= bbCode(h brick.text) %></div>
 <div class="controll">
 <%= link_to 'upravit', {:controller => 'wall', :action => 'edit', :id => brick.id}, :title => "naposledy upraveno #{brick.updated_at.to_formatted_s}" %> | 
 <%= link_to 'smazat', :controller => 'wall', :action => 'delete', :id => brick.id %>
