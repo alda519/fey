@@ -2,8 +2,11 @@
 <% form_for :brick do |f| %>
 <table>
 <tr><td>Titulek</td><td><%= f.text_field :title %></td></tr>
-<tr><td>Zpráva </td><td><%= f.text_area :text, :rows => 8 %></td></tr>
+<tr><td>Zpráva </td><td><%= f.text_area :text, :rows => 16, :cols => 80 %></td></tr>
 <tr colspan="2"><td><%= submit_tag 'pověsit na zeď' %></td></tr>
 </table>
 <% end %>
 </div>
+
+BBcode:<br>
+[b]text[/b], [i]text[/i], [u]text[/u], [img]url[/img] 
