@@ -9,21 +9,26 @@ class UserController < ApplicationController
   end
 
   def login
-    if request.post?
-      @current_user = User.find_by_login_and_password params[:login], Digest::SHA1.hexdigest(params[:password])
+    if request.post? # jestli byl poslan pozadavek na login
+      @current_user = User.find_by_login_and_password params[:user][:login], Digest::SHA1.hexdigest(params[:user][:password])
       unless @current_user.nil?
         session[:user_id] = @current_user.id
         # dopsat presmerovani na to, co jsem chtel delat
         redirect_to :action => 'show'
-        flash[:notice] = 'logged in'
+        #flash[:notice] = nil #"Byl jsi úspěšně přihlášen.".encoding
+        flash[:notice] = "Prihlaseni OK"
+      else
+        flash[:error] = "Neexistujici uzivatel nebo chybne heslo" #"Neexistující uživatel nebo chybné heslo."
+        @user = User.new params[:user]
+        @user.password = ''
       end
-    else
-      flash[:notice] = '!post'
     end
   end
 
   def logout
     session[:user_id] = @current_user = nil
+    flash[:notice] = "Byl jsi odhlasen"
+    redirect_to :action => 'login'
   end
 
   def register
@@ -45,6 +50,8 @@ class UserController < ApplicationController
   end
 
   def foto
+    flash[:warning] = "Jeste to nemam hotovy"
+    flash.discard
   end
 
   def avatar

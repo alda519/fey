@@ -21,7 +21,19 @@ module ApplicationHelper
     end
     data = x.join
 
+    #link [url=]jmeno[/url] TODO
+    #link [url]http:://url[/url] TODO
+    #data.sub! /http:\/\/(.*) /, ""
     data
+  end
+
+
+  def flashRender flash
+    fcode = String.new
+    fcode += "<div class=\"flashnotice\">#{flash[:notice]}</div>"   if flash[:notice]
+    fcode += "<div class=\"flashwarning\">#{flash[:warning]}</div>" if flash[:warning]
+    fcode += "<div class=\"flasherror\">#{flash[:error]}</div>"     if flash[:error]
+    fcode
   end
 
 end

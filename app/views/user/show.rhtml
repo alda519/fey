@@ -17,7 +17,3 @@ end
 <% unless @latest_brick.blank? %>
   <%= render :partial => 'wall/brick', :collection => [@latest_brick] %>
 <% end %>
-
-<% unless flash[:notice].blank? %>
-  <% flash[:notice] %>
-<% end %>

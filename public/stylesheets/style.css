@@ -218,3 +218,23 @@ h2 {
 #cow {
   text-align: center;
 }
+
+/* flash fields */
+.flashnotice {
+  background-color: #ccffcc;
+  border: solid 1px #00ff00;
+  padding: 4px;
+  margin: 10px;
+}
+.flasherror {
+  background-color: #ffcccc;
+  border: solid 1px #ff0000;
+  padding: 4px;
+  margin: 10px;
+}
+.flashwarning {
+  background-color: #ffffcc;
+  border: solid 1px #ffff00;
+  padding: 4px;
+  margin: 10px;
+}

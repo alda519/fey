@@ -12,13 +12,12 @@
   <%= link_to( image_tag('logo.png'), :controller => 'feysbook', :action => 'index') %>
   <div id="top_login">
 <% unless logged_in? %>
-  <% form_tag '/user/login' do %>
+  <% form_for :user, :action => '/user/login' do |f| %>
     <table>
     <tr><td>login</td><td>heslo</td><td> </td></tr>
-    <tr>
-    <td><%=text_field_tag 'login', nil, :size => 10%>
-    <td><%=password_field_tag 'password', nil, :size => 10%></td>
-    <td><%=submit_tag "log in" %></td>
+    <tr> <td><%=f.text_field :login, :size => 10%>
+         <td><%=f.password_field :password, :size => 10%></td>
+         <td><%=submit_tag "log in" %></td>
     </tr>
     </table>
   <% end %>
@@ -57,8 +56,10 @@
 </div>
 
 <div class="content">
+<%= flashRender flash %>
 <%= yield %>
 </div>
+
 
 </body>
 </html>
