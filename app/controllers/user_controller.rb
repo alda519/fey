@@ -2,7 +2,7 @@ require 'RMagick'
 
 class UserController < ApplicationController
 
-  before_filter :login_required, :only => [:show, :logout, :wall, :avatar, :newavatar, :foto, :edit]
+  before_filter :login_required, :except => [:login, :register]#, :only => [:show, :logout, :wall, :avatar, :newavatar, :foto, :edit, :delete]
 
   def index
     redirect_to :action => 'show'
@@ -15,10 +15,12 @@ class UserController < ApplicationController
         session[:user_id] = @current_user.id
         # dopsat presmerovani na to, co jsem chtel delat
         redirect_to :action => 'show'
-        #flash[:notice] = nil #"Byl jsi úspěšně přihlášen.".encoding
+        #flash[:notice] = nil #"Byl jsi úspěšně přihlášen."
         flash[:notice] = "Prihlaseni OK"
       else
         flash[:error] = "Neexistujici uzivatel nebo chybne heslo" #"Neexistující uživatel nebo chybné heslo."
+        flash[:warning] = "V ramci udrzby byla vetsina uzivatelu vymazana" #"Neexistující uživatel nebo chybné heslo."
+        flash.discard
         @user = User.new params[:user]
         @user.password = ''
       end
@@ -32,6 +34,11 @@ class UserController < ApplicationController
   end
 
   def register
+
+    # stop registraci
+    flash[:error] = "Registrace zrusene, bylo tu moc lidi, my asocialove na takove davy nejsme zvykli."
+    redirect_to :controller => 'faceboo'
+
     @user = User.new params[:user]
     if request.post? and @user.save
       session[:user_id] = @user.id
@@ -74,7 +81,9 @@ class UserController < ApplicationController
       begin
         img_orig = Magick::Image.read(path).first
         img_orig.resize_to_fill(80,80).write "#{directory}/avatar-#{@current_user.id}.png"
+        flash[:notice] = "Novy avatar uspesne nahran"
       rescue
+        flash[:error] = "Behem zmeny avataru doslo k chybe"
       end
       File.delete(path)
       redirect_to :action => 'show'
@@ -93,6 +102,18 @@ class UserController < ApplicationController
     else
       @user.password = ''
     end
+  end
+
+  def delete
+    @b = @current_user.bricks
+    @b.each { |r|
+      r.delete
+    }
+    File.delete "#{RAILS_ROOT}/lib/avatar-#{@current_user.id}.png" if FileTest.exists?("#{RAILS_ROOT}/lib/avatar-#{@current_user.id}.png")
+    @current_user.delete
+    flash[:notice] = "Ucet vymazan"
+    session[:user_id] = nil
+    redirect_to :controller => 'faceboo'
   end
 
 end

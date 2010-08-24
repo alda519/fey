@@ -19,17 +19,18 @@ class WallController < ApplicationController
     @brick = Brick.new params[:brick]
     @brick.user_id = @current_user.id
     if request.post? and @brick.save
+      flash[:notice] = "Prispevek pridan na zed."
       redirect_to :action => 'index'
     end
   end
 
   def delete
-    #@brick = Brick.find_by_id_and_user_id params[:id], @current_user.id
     @brick = @current_user.bricks.find_by_id params[:id]
     unless @brick.blank?
       @brick.destroy #delete
+      flash[:notice] = "Prispevek smazan"
     else
-      flash[:warning] = 'Tento nejde smazat'
+      flash[:error] = 'Tento nejde smazat'
     end
     redirect_to :controller => session[:page]
   end
@@ -39,9 +40,11 @@ class WallController < ApplicationController
     if request.post?
       @brick.attributes= params[:brick]
       if @brick.save
+         flash[:notice] = "Uspesne upraveno"
          redirect_to :action => 'index'
       else
         @brick = Brick.new params[:brick]
+        flash[:error] = "Zmeny nemohly byt ulozeny"
       end
     else
       redirect_to :action => 'index' if @brick.blank?

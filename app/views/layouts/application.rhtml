@@ -9,14 +9,14 @@
 
 <div id="blue_bar">
 <div id="heading" class="content">
-  <%= link_to( image_tag('logo.png'), :controller => 'feysbook', :action => 'index') %>
+  <%= link_to( image_tag('logo.png'), :controller => 'faceboo', :action => 'index') %>
   <div id="top_login">
 <% unless logged_in? %>
   <% form_for :user, :action => '/user/login' do |f| %>
     <table>
     <tr><td>login</td><td>heslo</td><td> </td></tr>
-    <tr> <td><%=f.text_field :login, :size => 10%>
-         <td><%=f.password_field :password, :size => 10%></td>
+    <tr> <td><%=f.text_field :login, :size => 10 %>
+         <td><%=f.password_field :password, :size => 10 %></td>
          <td><%=submit_tag "log in" %></td>
     </tr>
     </table>
